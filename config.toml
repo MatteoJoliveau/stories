@@ -1,0 +1,7 @@
+base_url = "https://stories.matteojoliveau.com"
+compile_sass = false
+highlight_code = true
+build_search_index = true
+
+[extra]
+# Put all your custom variables here
