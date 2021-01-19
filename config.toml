@@ -14,10 +14,22 @@ languages = [
 [translations.en]
 sections = "Sections"
 search = "Search"
+footer_license = "Source code is released under the [ISC license](https://opensource.org/licenses/ISC) and is available on [GitHub](https://github.com/matteojoliveau/stories)"
+footer_cc = """
+The content of this website (any text, copy and original content, including but not limited to stories, settings and names)
+is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License](https://creativecommons.org/licenses/by-nc-sa/4.0)
+unless otherwise specified
+"""
 
 [translations.it]
 sections = "Sezioni"
 search = "Cerca"
+footer_license = "Codice sorgente rilasciato dietro [licenza ISC](https://opensource.org/licenses/ISC) e disponibile su [GitHub](https://github.com/matteojoliveau/stories)"
+footer_cc = """
+Il contenuto di questo sito (qualunque testo e altri contenuti originali, inclusi ma non limitati a storie, ambientazioni e nomi)
+è concesso in licenza secondo i termini della [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License](https://creativecommons.org/licenses/by-nc-sa/4.0)
+se non diversamente specificato
+"""
 
 [extra]
 # Put all your custom variables here

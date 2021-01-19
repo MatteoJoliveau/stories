@@ -13,7 +13,7 @@ con solo qualche suggerimento e spunto pubblicati come addendum per aiutare a cr
 Questo sito raccoglie diverso materiale che ho scritto per Skyfarer per le mie partite, come quest, incontri, nuovi oggetti
 e personaggi, nonchè vere e proprie campagne. **Questi contenuti sono considerati fan work non ufficiale,
 Fallen London and Sunless Skies sono © 2019 e ™ [Failbetter Games Limited]**. I contenuti addizionali sono rilasciati
-gratuitamente sotto la licenza [CC BY-NC-SA 4.0].
+gratuitamente dietro licenza [CC BY-NC-SA 4.0].
 
 [Skyfarer]: https://failbetter-games.itch.io/skyfarer
 [Fallen London]: https://www.fallenlondon.com

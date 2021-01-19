@@ -1,11 +1,7 @@
 <footer class="footer">
     <div class="content">
         <p>Copyright 2021 <a href="https://matteojoliveau.com" target="_blank">Matteo Joliveau</a></p>
-        <p>Source code is released under the <a href="https://opensource.org/licenses/ISC" target="_blank">ISC license</a> and is available on <a href="https://github.com/matteojoliveau/stories" target="_blank">GitHub</a></p>
-        <p>
-            The content of this website (any text, copy and original content, including but not limited to stories, settings and names)
-            is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0" target="_blank">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License</a>
-            unless otherwise specified
-        </p>
+        <p>{{ trans(key="footer_license", lang=lang) | markdown | safe }}</p>
+        <p>{{ trans(key="footer_cc", lang=lang) | markdown | safe }}</p>
     </div>
 </footer>
