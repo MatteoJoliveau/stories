@@ -14,3 +14,6 @@
 <script type="text/javascript" src="{{ get_url(path="search_index.it.js") | safe }}" async></script>
 {% endif %}
 
+{% block rss %}
+<link rel="alternate" type="application/atom+xml" title="Atom" href="{{ get_url(path="atom.xml", trailing_slash=false) | safe }}">
+{% endblock %}
