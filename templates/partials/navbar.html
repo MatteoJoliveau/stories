@@ -1,6 +1,6 @@
 <nav class="navbar has-shadow">
     <div class="navbar-brand">
-        <a class="navbar-item has-text-weight-bold" href="{{ get_url(path="@/_index.md", lang=lang) }}">Stories</a>
+        <a class="navbar-item has-text-weight-bold" href="{{ get_url(path="@/_index.md", lang=lang) | safe }}">Stories</a>
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
@@ -13,7 +13,7 @@
             <div class="navbar-item has-dropdown is-hoverable is-hidden-tablet">
                 <a class="navbar-link">RPGs</a>
                 <div class="navbar-dropdown">
-                    <a class="navbar-item" href="{{ get_url(path="@/skyfarer/_index.md", lang=lang) }}">Skyfarer</a>
+                    <a class="navbar-item" href="{{ get_url(path="@/skyfarer/_index.md", lang=lang) | safe }}">Skyfarer</a>
                 </div>
             </div>
         </div>
