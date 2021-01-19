@@ -1,9 +1,20 @@
-<aside class="column is-2 is-hidden-mobile is-fullheight section">
-    <p class="menu-label is-hidden-touch">Navigation</p>
+<aside class="column is-one-fifth is-hidden-mobile is-fullheight section">
+    <div id="search-container" class="dropdown">
+        <label for="search" title="Search">
+            <input class="input is-rounded"
+                   id="search" name="search"
+                   type="search"
+                   placeholder="{{ trans(key="search", lang=lang) }}">
+        </label>
+        <div class="dropdown-menu">
+            <div id="search-results" class="dropdown-content"></div>
+        </div>
+    </div>
+    <p class="menu-label">Navigation</p>
     <ul class="menu-list">
         <li>
-            <a href="{{ get_url(path="@/_index.md", lang=lang) }}" class="">
-                <span class="icon"><i class="fa fa-home"></i></span> Home
+            <a href="{{ get_url(path=" @/_index.md", lang=lang) }}" class="">
+            <span class="icon"><i class="fa fa-home"></i></span> Home
             </a>
         </li>
         <li>
@@ -13,7 +24,7 @@
 
             <ul>
                 <li>
-                    <a href="{{ get_url(path="@/skyfarer/_index.md", lang=lang) }}">
+                    <a href="{{ get_url(path=" @/skyfarer/_index.md", lang=lang) }}">
                     <span class="icon is-small"><i class="fa fa-link"></i></span> Skyfarer
                     </a>
                 </li>

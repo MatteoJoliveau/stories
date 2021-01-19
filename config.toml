@@ -1,4 +1,5 @@
 base_url = "https://stories.matteojoliveau.com"
+title = "Stories"
 compile_sass = false
 highlight_code = true
 build_search_index = true
@@ -12,8 +13,11 @@ languages = [
 [translations]
 [translations.en]
 sections = "Sections"
+search = "Search"
+
 [translations.it]
 sections = "Sezioni"
+search = "Cerca"
 
 [extra]
 # Put all your custom variables here
