@@ -13,7 +13,7 @@
 <ul>
     {% for sub in section.subsections %}
         {% set sect = get_section(path=sub) %}
-        <li><a href="{{ sect.permalink }}">{{ sect.title }}</a></li>
+        <li><a href="{{ sect.permalink | safe }}">{{ sect.title }}</a></li>
     {% endfor %}
 </ul>
 {% endblock content %}

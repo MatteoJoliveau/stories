@@ -25,7 +25,7 @@
                     {% set root = section | default(value=page) %}
                     {% if root %}
                         {% for t in root.translations %}
-                            <a class="navbar-item" href="{{ t.permalink }}">{{ t.lang | upper }}</a>
+                            <a class="navbar-item" href="{{ t.permalink | safe }}">{{ t.lang | upper }}</a>
                         {% endfor %}
                     {% endif %}
                 </div>
