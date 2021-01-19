@@ -9,8 +9,8 @@
 <script type="text/javascript" src="{{ get_url(path="main.js") | safe }}" defer></script>
 <script type="text/javascript" src="{{ get_url(path="elasticlunr.min.js") | safe }}" async></script>
 {% if lang == "en" %}
-<script type="text/javascript" src="{{ get_url(path="search_index.en.js") }}" async></script>
+<script type="text/javascript" src="{{ get_url(path="search_index.en.js") | safe }}" async></script>
 {% elif lang == "it" %}
-<script type="text/javascript" src="{{ get_url(path="search_index.it.js") }}" async></script>
+<script type="text/javascript" src="{{ get_url(path="search_index.it.js") | safe }}" async></script>
 {% endif %}
 
