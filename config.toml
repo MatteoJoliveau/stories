@@ -16,8 +16,15 @@ languages = [
 
 [translations]
 [translations.en]
+by = "by"
+nothing-here="Uh oh, there is nothing here"
+available-in="Available in"
 sections = "Sections"
 search = "Search"
+back-to-quests = "Back to quests"
+reading-time = "Reading time"
+minutes = "minutes"
+
 footer_license = "Source code is released under the [ISC license](https://opensource.org/licenses/ISC) and is available on [GitHub](https://github.com/matteojoliveau/stories)"
 footer_cc = """
 The content of this website (any text, copy and original content, including but not limited to stories, settings and names)
@@ -26,8 +33,15 @@ unless otherwise specified
 """
 
 [translations.it]
+by = "di"
+nothing-here="Uh oh, non c'è niente qui"
+available-in="Disponibile in"
 sections = "Sezioni"
 search = "Cerca"
+back-to-quests = "Torna alle quests"
+reading-time = "Tempo di lettura"
+minutes = "minuti"
+
 footer_license = "Codice sorgente rilasciato dietro [licenza ISC](https://opensource.org/licenses/ISC) e disponibile su [GitHub](https://github.com/matteojoliveau/stories)"
 footer_cc = """
 Il contenuto di questo sito (qualunque testo e altri contenuti originali, inclusi ma non limitati a storie, ambientazioni e nomi)

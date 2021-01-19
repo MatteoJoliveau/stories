@@ -1,4 +1,4 @@
-<aside class="column is-one-fifth is-hidden-mobile is-fullheight section">
+<aside class="column is-2 is-hidden-touch is-fullheight section">
     <div id="search-container" class="dropdown">
         <label for="search" title="Search">
             <input class="input is-rounded"
@@ -19,14 +19,21 @@
         </li>
         <li>
             <a href="#" class="">
-                <span class="icon"><i class="fa fa-table"></i></span> RPGs
+                <span class="icon"><i class="fas fa-dice-d20"></i></span> RPGs
             </a>
 
             <ul>
                 <li>
+                    {% set skyfarer = get_section(path="skyfarer/_index.md") %}
                     <a href="{{ get_url(path="@/skyfarer/_index.md", lang=lang) | safe }}">
-                    <span class="icon is-small"><i class="fa fa-link"></i></span> Skyfarer
+                    {{ skyfarer.title }}
                     </a>
+                    <ul>
+                        {% for sky_sub_path in skyfarer.subsections %}
+                        {% set sky_sub = get_section(path=sky_sub_path) %}
+                        <li><a href="{{ sky_sub.permalink | safe }}">{{ sky_sub.title }}</a></li>
+                        {% endfor %}
+                    </ul>
                 </li>
             </ul>
         </li>
