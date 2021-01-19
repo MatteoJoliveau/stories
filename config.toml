@@ -5,6 +5,9 @@ highlight_code = true
 build_search_index = true
 render_emoji = true
 generate_feed = true
+external_links_target_blank = true
+external_links_no_follow = true
+external_links_no_referrer = true
 
 default_language = "en"
 languages = [
