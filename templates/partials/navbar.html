@@ -1,0 +1,35 @@
+<nav class="navbar has-shadow">
+    <div class="navbar-brand">
+        <a class="navbar-item has-text-weight-bold" href="{{ get_url(path="@/_index.md", lang=lang) }}">Stories</a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div class="navbar-menu">
+        <div class="navbar-start">
+            <div class="navbar-item has-dropdown is-hoverable is-hidden-tablet">
+                <a class="navbar-link">RPGs</a>
+                <div class="navbar-dropdown">
+                    <a class="navbar-item" href="{{ get_url(path="@/skyfarer/_index.md", lang=lang) }}">Skyfarer</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar-end">
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">{{ lang | upper }}</a>
+                <div class="navbar-dropdown">
+                    {% set root = section | default(value=page) %}
+                    {% if root %}
+                        {% for t in root.translations %}
+                            <a class="navbar-item" href="{{ t.permalink }}">{{ t.lang | upper }}</a>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

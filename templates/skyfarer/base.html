@@ -2,7 +2,15 @@
 <html lang="en">
 <head>
     {% include "partials/head.html" %}
-    <title>Stories</title>
+    <title>{% block title %}
+        {% if page %}
+            {{ page.title }} | Skyfarer
+        {% elif section %}
+            {{ section.title }} | Skyfarer
+        {% else %}
+            Skyfarer
+        {% endif %}
+        {% endblock %}</title>
 </head>
 <body>
 {% include "partials/navbar.html" %}
@@ -16,7 +24,6 @@
         </div>
     </section>
 </div>
-
 {% include "partials/footer.html" %}
 </body>
 </html>

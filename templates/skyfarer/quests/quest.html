@@ -1,0 +1,11 @@
+{% extends "skyfarer/base.html" %}
+
+{% block content %}
+<h1 class="title">{{ page.title }}</h1>
+<div class="content">
+    {{ page.content | safe }}
+</div>
+{% for t in page.translations %}
+<p>Translated in {{t.lang|default(value=config.default_language)}}: <a href="{{t.permalink|safe}}">{{t.title}}</a></p>
+{% endfor %}
+{% endblock content %}
