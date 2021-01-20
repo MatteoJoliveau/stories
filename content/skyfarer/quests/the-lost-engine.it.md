@@ -1,10 +1,11 @@
 +++
 title = "The Lost Engine"
 description = ""
-draft = true
+draft = false
 
 [extra]
 author = "Matteo Joliveau"
+cover = "skyfarer/quests/skyfarer-wreck.jpg"
 +++
 
 L'equipaggio è appena approdato a New Winchester e si sta godendo un meritato riposo

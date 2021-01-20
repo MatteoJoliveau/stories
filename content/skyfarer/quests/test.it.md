@@ -1,7 +1,7 @@
 +++
 title = "Quest di prova"
 description = "This is a new quest template for Skyfarer"
-draft = false
+date = 2021-01-20
 
 [extra]
 author = "Matteo Joliveau"

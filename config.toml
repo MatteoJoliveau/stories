@@ -60,4 +60,5 @@ se non diversamente specificato
 """
 
 [extra]
-# Put all your custom variables here
+default_cover = "cover.jpg"
+site_twitter = "matteojoliveau"

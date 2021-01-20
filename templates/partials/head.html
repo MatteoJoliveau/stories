@@ -1,3 +1,4 @@
+
 <meta charset="UTF-8">
 <meta name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -9,11 +10,47 @@
 <script type="text/javascript" src="{{ get_url(path="main.js") | safe }}" defer></script>
 <script type="text/javascript" src="{{ get_url(path="elasticlunr.min.js") | safe }}" async></script>
 {%- if lang == "en" -%}
-<script type="text/javascript" src="{{ get_url(path="search_index.en.js") | safe }}" async></script>
+    <script type="text/javascript" src="{{ get_url(path="search_index.en.js") | safe }}" async></script>
 {%- elif lang == "it" -%}
-<script type="text/javascript" src="{{ get_url(path="search_index.it.js") | safe }}" async></script>
+    <script type="text/javascript" src="{{ get_url(path="search_index.it.js") | safe }}" async></script>
 {%- endif -%}
 
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@{{ config.extra.site_twitter }}">
+
+{%- set current = section | default(value=page) -%}
+<meta property="og:title" content="{{ current.title | default(value=config.title) }}">
+<meta property="og:url" content="{{ current.permalink }}">
+{%- set image = current.extra.cover | default(value=config.extra.default_cover) -%}
+<meta property="og:image" content="{{ get_url(path=image) }}">
+{%- if current.description -%}
+    <meta name="description" content="{{ current.description }}">
+    <meta property="og:description" content="{{ current.description }}">
+{%- endif -%}
+
+{%- if current.extra.author -%}
+    {%- set slug = current.extra.author | slugify -%}
+    {%- set author = get_page(path="authors/" ~ slug ~ ".md") -%}
+    <meta name="author" content="{{ author.title }}">
+    {%- if author.extra.twitter -%}
+        {%- set twitter = author.extra.twitter | trim_start_matches(pat="@") -%}
+        <meta name="twitter:creator" content="@{{ twitter }}" />
+    {%- endif -%}
+{%- endif -%}
+
+{%- for t in current.translations -%}
+    {%- set alternate = t.lang != lang -%}
+    {%- if t.lang == "en" -%}
+        {%- set suffix = "GB" -%}
+    {%- else -%}
+        {%- set suffix = t.lang | upper -%}
+    {%- endif -%}
+    <meta property="og:locale{%- if alternate -%}:alternate{%- endif -%}" content="{{ t.lang }}_{{ suffix }}" />
+    <link rel="alternate" hreflang="{{ t.lang }}" href="{{ t.permalink }}" />
+    {%- if t.lang == config.default_language %}<link rel="alternate" hreflang="x-default" href="{{ t.permalink }}" />{%- endif -%}
+{%- endfor -%}
+
 {%- block rss -%}
-<link rel="alternate" type="application/atom+xml" title="Atom" href="{{ get_url(path="atom.xml", trailing_slash=false) | safe }}">
+    <link rel="alternate" type="application/atom+xml" title="Atom"
+          href="{{ get_url(path="atom.xml", trailing_slash=false) | safe }}">
 {%- endblock -%}

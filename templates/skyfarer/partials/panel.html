@@ -43,7 +43,7 @@
     {# General #}
     {%- if is_general_tab -%}
         {%- for page in skyfarer.pages -%}
-            <a class="panel-block{%- if page.path == current_path -%} is-active{%- endif -%}"
+            <a class="panel-block{% if page.path == current_path %} is-active{%- endif -%}"
                href="{{ page.permalink | safe }}">
                 {%- if page.extra.icon -%}
                     <span class="panel-icon">
@@ -59,7 +59,7 @@
         {# Subsection #}
         {%- for page in current_section.pages -%}
             {%- set icon = page.extra.icon | default(value=current_section.extra.icon | default(value="")) -%}
-            <a class="panel-block{%- if page.path == current_path -%} is-active{%- endif -%}"
+            <a class="panel-block{% if page.path == current_path %} is-active{%- endif -%}"
                href="{{ page.permalink | safe }}">
                 {%- if icon -%}
                     <span class="panel-icon">

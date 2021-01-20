@@ -1,10 +1,10 @@
 {%- import "macros.html" as macros -%}
-
 <!doctype html>
-<html lang="en">
+<html lang="{{ lang }}" prefix="og: http://ogp.me/ns#">
 <head>
     {%- include "partials/head.html" -%}
     <title>{%- block title -%}{{ config.title }}{%- endblock title -%}</title>
+
 </head>
 <body>
 {%- include "partials/navbar.html" -%}
