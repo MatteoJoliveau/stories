@@ -14,7 +14,6 @@
     <script type="text/javascript" src="{{ get_url(path="search_index.it.js") | safe }}" async></script>
 {%- endif -%}
 
-<meta name="twitter:card" content="summary_image_large">
 <meta name="twitter:site" content="@{{ config.extra.site_twitter }}">
 
 {%- set current = section | default(value=page) -%}
@@ -25,8 +24,10 @@
 
 {%- if current.relative_path is starting_with("_index") or section %}
     <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
 {%- else -%}
     <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
 {%- endif -%}
 
 {%- if current.description -%}
