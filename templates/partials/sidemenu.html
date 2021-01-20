@@ -1,6 +1,6 @@
 {# Variables #}
-{% set sky_root_url = get_url(path="@/skyfarer/_index.md", lang=lang) | safe %}
-{% set skyfarer = get_section(path="skyfarer/_index.md") %}
+{%- set sky_root_url = get_url(path="@/skyfarer/_index.md", lang=lang) | safe -%}
+{%- set skyfarer = get_section(path="skyfarer/_index.md") -%}
 
 <div class="menu">
     <p class="menu-label">Navigation</p>
@@ -24,8 +24,8 @@
             </ul>
         </li>
         <li>
-            <a href="#" class="">
-                <span class="icon"><i class="fa fa-info"></i></span> About
+            <a href="{{ get_url(path="@/authors/_index.md", lang=lang) }}" class="{{ macros::is_page_active(name="authors/_index", recursive=true) }}">
+                <span class="icon"><i class="fas fa-user-friends"></i></span> {{ trans(key="authors", lang=lang) }}
             </a>
         </li>
     </ul>

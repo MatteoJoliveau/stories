@@ -1,0 +1,57 @@
+{%- extends "base.html" -%}
+
+{%- block title -%}{{ page.title }} | Authors{%- endblock title -%}
+
+{%- block content -%}
+    <h1 class="title">{{ page.title }}</h1>
+    <div class="columns">
+        <div class="column is-one-third">
+            <div class="card">
+                {%- if page.extra.gravatar -%}
+                    <div class="card-image">
+                        <figure class="image is-1b1">
+                            <img src="https://www.gravatar.com/avatar/{{ page.extra.gravatar }}?s=960" alt="Avatar">
+                        </figure>
+                    </div>
+                {%- elif page.extra.image -%}
+                    <div class="card-image">
+                        <figure class="image is-128x128">
+                            <img src="{{ page.extra.image | safe }}" alt="Avatar">
+                        </figure>
+                    </div>
+                {%- endif -%}
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-content">
+                            <p class="title is-4">{{ page.title }}</p>
+                            {%- if page.extra.twitter -%}
+                            {%- set twitter = page.extra.twitter | trim_start_matches(pat="@") -%}
+                            <a class="is-6"
+                               href="https://twitter.com/{{ twitter }}"
+                               target="_blank">
+                                @{{ twitter }}
+                            </a>
+                            {%- endif -%}
+                        </div>
+                    </div>
+
+                    <p class="content">{{ page.description }}</p>
+
+                    {%- if page.extra.links -%}
+                    <footer class="card-footer">
+                        {%- for icon, link in page.extra.links -%}
+                        <a class="card-footer-item" href="{{ link }}" target="_blank">
+                            <span class="icon is-medium"><i class="{{ icon }} fa-lg"></i></span>
+                        </a>
+                        {%- endfor -%}
+                    </footer>
+                    {%- endif -%}
+                </div>
+            </div>
+        </div>
+
+        <div class="column content is-medium">
+            {{ page.content | safe }}
+        </div>
+    </div>
+{%- endblock content -%}

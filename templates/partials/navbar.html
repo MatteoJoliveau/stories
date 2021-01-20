@@ -16,18 +16,22 @@
                     <a class="navbar-item {{ macros::is_page_active(name="skyfarer/_index", recursive=true) }}" href="{{ get_url(path="@/skyfarer/_index.md", lang=lang) | safe }}">Skyfarer</a>
                 </div>
             </div>
+
+            <a href="{{ get_url(path="@/authors/_index.md", lang=lang) }}" class="navbar-item is-hidden-desktop {{ macros::is_page_active(name="authors/_index", recursive=true) }}">
+                <span class="icon"><i class="fas fa-user-friends"></i></span> {{ trans(key="authors", lang=lang) }}
+            </a>
         </div>
 
         <div class="navbar-end">
             <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link">{{ lang | upper }}</a>
                 <div class="navbar-dropdown">
-                    {% set root = section | default(value=page) %}
-                    {% if root %}
-                        {% for t in root.translations %}
+                    {%- set root = section | default(value=page) -%}
+                    {%- if root -%}
+                        {%- for t in root.translations -%}
                             <a class="navbar-item" href="{{ t.permalink | safe }}">{{ t.lang | upper }}</a>
-                        {% endfor %}
-                    {% endif %}
+                        {%- endfor -%}
+                    {%- endif -%}
                 </div>
             </div>
         </div>

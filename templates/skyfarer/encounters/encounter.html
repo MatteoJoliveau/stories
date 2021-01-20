@@ -1,30 +1,30 @@
-{% extends "skyfarer/base.html" %}
+{%- extends "skyfarer/base.html" -%}
 
-{% block content %}
+{%- block content -%}
 <h1 class="title">{{ page.title }}</h1>
 <div class="level">
     <div class="level-left">
-        {% if page.extra.author %}
+        {%- if page.extra.author -%}
         <p class="level-item">{{ page.extra.author }}</p>
-        {% endif %}
+        {%- endif -%}
         <p class="level-item">{{ trans(key="reading-time", lang=lang) }}: {{ page.reading_time }} {{
             trans(key="minutes", lang=lang) }}</p>
     </div>
-    {% if page.translations | length > 0 %}
+    {%- if page.translations | length > 0 -%}
     <div class="level-right">
         <p class="level-item">
             {{ trans(key="available-in", lang=lang) }}
-            {% for t in page.translations %}
+            {%- for t in page.translations -%}
             <a href="{{ t.permalink }}">&nbsp;{{ t.lang | upper }}</a>
-            {% endfor %}
+            {%- endfor -%}
         </p>
     </div>
-    {% endif %}
+    {%- endif -%}
 </div>
 <div class="content is-medium">
     {{ page.content | safe }}
 </div>
-{% set quests = page.ancestors | last %}
-{% set back = get_section(path=quests) %}
+{%- set quests = page.ancestors | last -%}
+{%- set back = get_section(path=quests) -%}
 <a href="{{ back.permalink | safe }}">{{ trans(key="back-to-quests", lang=lang) }}</a>
-{% endblock content %}
+{%- endblock content -%}

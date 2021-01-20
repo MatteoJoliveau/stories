@@ -8,12 +8,12 @@
 <link rel="stylesheet" href="{{ get_url(path="main.css") | safe }}">
 <script type="text/javascript" src="{{ get_url(path="main.js") | safe }}" defer></script>
 <script type="text/javascript" src="{{ get_url(path="elasticlunr.min.js") | safe }}" async></script>
-{% if lang == "en" %}
+{%- if lang == "en" -%}
 <script type="text/javascript" src="{{ get_url(path="search_index.en.js") | safe }}" async></script>
-{% elif lang == "it" %}
+{%- elif lang == "it" -%}
 <script type="text/javascript" src="{{ get_url(path="search_index.it.js") | safe }}" async></script>
-{% endif %}
+{%- endif -%}
 
-{% block rss %}
+{%- block rss -%}
 <link rel="alternate" type="application/atom+xml" title="Atom" href="{{ get_url(path="atom.xml", trailing_slash=false) | safe }}">
-{% endblock %}
+{%- endblock -%}

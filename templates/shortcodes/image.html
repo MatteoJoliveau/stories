@@ -1,0 +1,7 @@
+<figure class="image{%- if class -%} {{ class }}{%- endif -%}">
+    <img src="{{ src | safe }}"
+         alt="{{ alt }}"
+         {%- if width -%}width="{{ width }}" {%- endif -%}
+         {%- if height -%}height="{{ height }}" {%- endif -%}
+         style="{%- if width -%}width:{{ width }}px{%- endif -%}{%- if height -%};height:{{ height }}px{%- endif -%}">
+</figure>
