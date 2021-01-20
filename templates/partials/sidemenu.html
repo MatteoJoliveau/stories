@@ -1,20 +1,13 @@
-<aside class="column is-2 is-hidden-touch is-fullheight section">
-    <div id="search-container" class="dropdown">
-        <label for="search" title="Search">
-            <input class="input is-rounded"
-                   id="search" name="search"
-                   type="search"
-                   placeholder="{{ trans(key="search", lang=lang) }}">
-        </label>
-        <div class="dropdown-menu">
-            <div id="search-results" class="dropdown-content"></div>
-        </div>
-    </div>
+{# Variables #}
+{% set sky_root_url = get_url(path="@/skyfarer/_index.md", lang=lang) | safe %}
+{% set skyfarer = get_section(path="skyfarer/_index.md") %}
+
+<div class="menu">
     <p class="menu-label">Navigation</p>
     <ul class="menu-list">
         <li>
             <a href="{{ get_url(path="@/_index.md", lang=lang) | safe }}" class="">
-            <span class="icon"><i class="fa fa-home"></i></span> Home
+                <span class="icon"><i class="fa fa-home"></i></span> Home
             </a>
         </li>
         <li>
@@ -24,16 +17,9 @@
 
             <ul>
                 <li>
-                    {% set skyfarer = get_section(path="skyfarer/_index.md") %}
-                    <a href="{{ get_url(path="@/skyfarer/_index.md", lang=lang) | safe }}">
-                    {{ skyfarer.title }}
+                    <a href="{{ sky_root_url }}">
+                        {{ skyfarer.title }}
                     </a>
-                    <ul>
-                        {% for sky_sub_path in skyfarer.subsections %}
-                        {% set sky_sub = get_section(path=sky_sub_path) %}
-                        <li><a href="{{ sky_sub.permalink | safe }}">{{ sky_sub.title }}</a></li>
-                        {% endfor %}
-                    </ul>
                 </li>
             </ul>
         </li>
@@ -43,4 +29,5 @@
             </a>
         </li>
     </ul>
-</aside>
+</div>
+

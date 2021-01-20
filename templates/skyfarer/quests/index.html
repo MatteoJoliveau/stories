@@ -11,7 +11,7 @@
 <h2 class="subtitle">Quests</h2>
 <ul>
     {% for page in section.pages %}
-        <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a>{% if page.extra.author %} by <a href="#">{{ page.extra.author }}</a>{% endif %}</li>
+        <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a>{% if page.extra.author %} {{ trans(key="by", lang=lang) }} <a href="#">{{ page.extra.author }}</a>{% endif %}</li>
     {% else %}
         <p>{{ trans(key="nothing-here", lang=lang) }}</p>
     {% endfor %}

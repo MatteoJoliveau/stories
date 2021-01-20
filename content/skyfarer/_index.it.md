@@ -10,7 +10,7 @@ di [Sunless Skies], il terzo gioco della serie prodotta da [Failbetter Games].
 Tuttavia, il fatto di essere molto flessibile e aperto significa che non esistono vere e proprie "avventure" ufficiali per il gioco,
 con solo qualche suggerimento e spunto pubblicati come addendum per aiutare a crearne di proprie.
 
-Questo sito raccoglie diverso materiale che ho scritto per Skyfarer per le mie partite, come quest, incontri, nuovi oggetti
+Questo sito raccoglie diverso materiale che ho scritto per Skyfarer per le mie partite, come [quest](@/skyfarer/quests/_index.it.md), [incontri](@/skyfarer/encounters/_index.it.md), nuovi oggetti
 e personaggi, nonchè vere e proprie campagne. **Questi contenuti sono considerati fan work non ufficiale,
 Fallen London and Sunless Skies sono © 2019 e ™ [Failbetter Games Limited]**. I contenuti addizionali sono rilasciati
 gratuitamente dietro licenza [CC BY-NC-SA 4.0].

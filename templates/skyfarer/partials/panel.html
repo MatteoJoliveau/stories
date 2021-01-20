@@ -1,0 +1,75 @@
+{# Variables #}
+{% set sky_root_url = get_url(path="@/skyfarer/_index.md", lang=lang) | safe %}
+{% if lang != config.default_language %}
+    {% set skyfarer_file =  "skyfarer/_index." ~ lang ~ ".md" %}
+{% else %}
+    {% set skyfarer_file =  "skyfarer/_index.md" %}
+{% endif %}
+{% set skyfarer = get_section(path=skyfarer_file) %}
+{% set current_section = section | default(value=get_section(path=page.ancestors | last)) %}
+{% set is_generic_page = page and page.ancestors | length == 2 %}
+{% set is_root_section = section and section == skyfarer %}
+
+{# Template #}
+<div class="panel mt-4">
+    <p class="panel-heading">Skyfarer</p>
+    <div id="search-container" class="panel-block dropdown">
+        <p class="control has-icons-left has-tooltip-arrow" data-tooltip="Coming soon">
+            <input class="input" type="search" id="search" name="search"
+                   placeholder="{{ trans(key="search", lang=lang) }}" disabled>
+            <span class="icon is-left">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                </span>
+        </p>
+        <div class="dropdown-menu">
+            <div id="search-results" class="dropdown-content"></div>
+        </div>
+    </div>
+    {% set is_general_tab = is_generic_page or is_root_section %}
+    <p class="panel-tabs">
+        <a class="{% if is_general_tab %}is-active{% endif %}"
+           href="{{ sky_root_url }}">
+            {{ trans(key="general", lang=lang) }}
+        </a>
+
+        {% for sky_sub_path in skyfarer.subsections %}
+            {% set sky_sub = get_section(path=sky_sub_path) %}
+            {% set is_current_section = not is_root_section and current_path == sky_sub.path %}
+            {% set is_current_subsection = page and sky_sub.relative_path == page.ancestors | last %}
+            <a class="{% if is_current_section or is_current_subsection %}is-active{% endif %}"
+               href="{{ sky_sub.permalink | safe }}">{{ sky_sub.title }}</a>
+        {% endfor %}
+    </p>
+    {# General #}
+    {% if is_general_tab %}
+        {% for page in skyfarer.pages %}
+            <a class="panel-block{% if page.path == current_path %} is-active{% endif %}"
+               href="{{ page.permalink | safe }}">
+                {% if page.extra.icon %}
+                    <span class="panel-icon">
+                      <i class="{{ page.extra.icon }}" aria-hidden="true"></i>
+                    </span>
+                {% endif %}
+                {{ page.title }}
+            </a>
+        {% else %}
+            <p class="panel-block">{{ trans(key="nothing-here", lang=lang) }}</p>
+        {% endfor %}
+    {% elif current_section and current_section != skyfarer %}
+        {# Subsection #}
+        {% for page in current_section.pages %}
+            {% set icon = page.extra.icon | default(value=current_section.extra.icon | default(value="")) %}
+            <a class="panel-block{% if page.path == current_path %} is-active{% endif %}"
+               href="{{ page.permalink | safe }}">
+                {% if icon %}
+                    <span class="panel-icon">
+                      <i class="{{ icon }}" aria-hidden="true"></i>
+                    </span>
+                {% endif %}
+                {{ page.title }}
+            </a>
+        {% else %}
+            <p class="panel-block">{{ trans(key="nothing-here", lang=lang) }}</p>
+        {% endfor %}
+    {% endif %}
+</div>

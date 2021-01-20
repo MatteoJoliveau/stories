@@ -2,3 +2,13 @@
 
 @import "~bulma/sass/utilities/initial-variables";
 @import "~bulma/bulma";
+@import "~@creativebulma/bulma-tooltip/src/sass/index";
+
+@media screen and (min-width: 1955px) {
+  .column {
+    &.is-2-ultrawide {
+      flex: none;
+      width: percentage(2 / 12);
+    }
+  }
+}

@@ -10,19 +10,54 @@
         {% else %}
             Skyfarer
         {% endif %}
-        {% endblock %}</title>
+    {% endblock %}</title>
 </head>
 <body>
 {% include "partials/navbar.html" %}
 
 <div class="columns is-fullheight">
-    {% include "partials/sidemenu.html" %}
+    <aside class="column is-4-tablet is-3-widescreen is-2-ultrawide is-hidden-touch is-fullheight section">
+        {% include "partials/sidemenu.html" %}
+        {% include "skyfarer/partials/panel.html" %}
+    </aside>
 
-    <section class="section column">
-        <div class="container">
-            {% block content %} {% endblock %}
-        </div>
-    </section>
+    <div class="column">
+        <section class="section">
+            <div class="container">
+                {% block content %} {% endblock %}
+            </div>
+        </section>
+
+        <section class="section is-hidden-desktop">
+            {% include "skyfarer/partials/panel.html" %}
+        </section>
+
+        {% if false %}
+            <section class="section is-hidden-desktop">
+                {% if section.pages | length > 0 %}
+                    <div class="container mb-4">
+                        <h2 class="subtitle">{{ trans(key="pages", lang=lang) }}</h2>
+                        <ul>
+                            {% for page in section.pages %}
+                                <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+                {% if section.subsections | length > 0 %}
+                    <div class="container">
+                        <h2 class="subtitle">{{ trans(key="sections", lang=lang) }}</h2>
+                        <ul>
+                            {% for sub_path in section.subsections %}
+                                {% set sub = get_section(path=sub_path) %}
+                                <li><a href="{{ sub.permalink | safe }}">{{ sub.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+            </section>
+        {% endif %}
+    </div>
 </div>
 {% include "partials/footer.html" %}
 </body>
