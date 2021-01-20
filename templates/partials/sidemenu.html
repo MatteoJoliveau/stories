@@ -6,7 +6,7 @@
     <p class="menu-label">Navigation</p>
     <ul class="menu-list">
         <li>
-            <a href="{{ get_url(path="@/_index.md", lang=lang) | safe }}" class="">
+            <a href="{{ get_url(path="@/_index.md", lang=lang) | safe }}" class="{{ macros::is_page_active(name="_index") }}">
                 <span class="icon"><i class="fa fa-home"></i></span> Home
             </a>
         </li>
@@ -17,7 +17,7 @@
 
             <ul>
                 <li>
-                    <a href="{{ sky_root_url }}">
+                    <a href="{{ sky_root_url }}" class="{{ macros::is_page_active(name="skyfarer/_index", recursive=true) }}">
                         {{ skyfarer.title }}
                     </a>
                 </li>

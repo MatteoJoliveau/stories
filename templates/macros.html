@@ -1,0 +1,20 @@
+{% macro is_page_active(name, recursive=false) %}
+    {% if lang == config.default_language %}
+        {% set full_name = name ~ ".md" %}
+    {% else %}
+        {% set full_name = name ~ "." ~ lang ~ ".md" %}
+    {% endif %}
+
+    {% set current = section | default(value=page) %}
+    {% if current %}
+        {% if recursive %}
+            {% set is_current_active = current.relative_path == full_name %}
+            {% set is_active = is_current_active or full_name in current.ancestors %}
+        {% else %}
+            {% set is_active = current.relative_path == full_name %}
+        {% endif %}
+    {% else %}
+        {% set is_active = false %}
+    {% endif %}
+    {% if is_active %}is-active{% endif %}
+{% endmacro is_page_active %}

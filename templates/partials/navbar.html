@@ -13,7 +13,7 @@
             <div class="navbar-item has-dropdown is-hoverable is-hidden-desktop">
                 <a class="navbar-link"><span class="icon"><i class="fas fa-dice-d20"></i></span> RPGs</a>
                 <div class="navbar-dropdown">
-                    <a class="navbar-item" href="{{ get_url(path="@/skyfarer/_index.md", lang=lang) | safe }}">Skyfarer</a>
+                    <a class="navbar-item {{ macros::is_page_active(name="skyfarer/_index", recursive=true) }}" href="{{ get_url(path="@/skyfarer/_index.md", lang=lang) | safe }}">Skyfarer</a>
                 </div>
             </div>
         </div>
