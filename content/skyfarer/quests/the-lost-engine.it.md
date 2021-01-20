@@ -1,6 +1,6 @@
 +++
 title = "The Lost Engine"
-description = ""
+description = "Una locomotiva dispersa e un mistero dal passato. Nulla può prepararli a ciò che troveranno"
 draft = false
 
 [extra]
