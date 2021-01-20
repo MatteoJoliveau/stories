@@ -3,7 +3,7 @@ title = "The Lost Engine"
 description = "Una locomotiva dispersa e un mistero dal passato. Nulla può prepararli a ciò che troveranno"
 draft = true
 date = "2020-01-21"
-updated = ""
+updated = "2020-01-21"
 
 [extra]
 author = "Matteo Joliveau"
