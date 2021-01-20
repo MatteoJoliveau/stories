@@ -1,4 +1,3 @@
-
 <meta charset="UTF-8">
 <meta name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -23,18 +22,36 @@
 <meta property="og:url" content="{{ current.permalink }}">
 {%- set image = current.extra.cover | default(value=config.extra.default_cover) -%}
 <meta property="og:image" content="{{ get_url(path=image) }}">
+
+{%- if current.relative_path is starting_with("_index") or section %}
+    <meta property="og:type" content="website">
+{%- else -%}
+    <meta property="og:type" content="article">
+{%- endif -%}
+
 {%- if current.description -%}
     <meta name="description" content="{{ current.description }}">
     <meta property="og:description" content="{{ current.description }}">
+{%- endif -%}
+
+{%- if current.ancestors | length > 1 -%}
+    {%- set_global parents = [] %}
+    {%- for parent_path in current.ancestors | slice(start=1) %}
+        {%- set parent = get_section(path=parent_path, metadata_only=true) %}
+        {%- set_global parents = parents | concat(with=parent.title) %}
+    {%- endfor %}
+    {%- set sect = parents | join(sep=" ") %}
+    <meta property="article:section" content="{{ sect }}">
 {%- endif -%}
 
 {%- if current.extra.author -%}
     {%- set slug = current.extra.author | slugify -%}
     {%- set author = get_page(path="authors/" ~ slug ~ ".md") -%}
     <meta name="author" content="{{ author.title }}">
+    <meta name="article:author" content="{{ author.title }}">
     {%- if author.extra.twitter -%}
         {%- set twitter = author.extra.twitter | trim_start_matches(pat="@") -%}
-        <meta name="twitter:creator" content="@{{ twitter }}" />
+        <meta name="twitter:creator" content="@{{ twitter }}"/>
     {%- endif -%}
 {%- endif -%}
 
@@ -45,9 +62,10 @@
     {%- else -%}
         {%- set suffix = t.lang | upper -%}
     {%- endif -%}
-    <meta property="og:locale{%- if alternate -%}:alternate{%- endif -%}" content="{{ t.lang }}_{{ suffix }}" />
-    <link rel="alternate" hreflang="{{ t.lang }}" href="{{ t.permalink }}" />
-    {%- if t.lang == config.default_language %}<link rel="alternate" hreflang="x-default" href="{{ t.permalink }}" />{%- endif -%}
+    <meta property="og:locale{%- if alternate -%}:alternate{%- endif -%}" content="{{ t.lang }}_{{ suffix }}"/>
+    <link rel="alternate" hreflang="{{ t.lang }}" href="{{ t.permalink }}"/>
+    {%- if t.lang == config.default_language %}
+        <link rel="alternate" hreflang="x-default" href="{{ t.permalink }}"/>{%- endif -%}
 {%- endfor -%}
 
 {%- block rss -%}
