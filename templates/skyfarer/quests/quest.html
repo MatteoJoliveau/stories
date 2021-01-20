@@ -15,7 +15,7 @@
         <p class="level-item">
             {{ trans(key="available-in", lang=lang) }}
             {%- for t in page.translations -%}
-            <a href="{{ t.permalink }}">&nbsp;{{ t.lang | upper }}</a>
+            <a href="{{ t.permalink | safe }}">&nbsp;{{ t.lang | upper }}</a>
             {%- endfor -%}
         </p>
     </div>
