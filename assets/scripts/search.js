@@ -41,11 +41,11 @@ export class Searcher {
   }
 }
 
-export function attachSearchBar (document, window) {
+export function attachSearchBar (document, elastic, searchIndex) {
   const searchContainer = document.getElementById('search-container')
   const bar = document.getElementById('search')
   const resultsContainer = document.getElementById('search-results')
-  const index = elasticlunr.Index.load(window.searchIndex)
+  const index = elastic.Index.load(searchIndex)
   const searcher = new Searcher(index)
 
   bar.addEventListener('keyup', debounce(() => {
