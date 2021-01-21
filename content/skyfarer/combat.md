@@ -6,6 +6,7 @@ draft = false
 
 [extra]
 icon = "fas fa-fist-raised"
+cover = "skyfarer/sunlesskies.webp"
 +++
 
 # Engine-to-engine combat
