@@ -1,17 +1,18 @@
 base_url = "https://stories.matteojoliveau.com"
 title = "Stories"
 compile_sass = false
-highlight_code = true
 build_search_index = false
 render_emoji = true
 generate_feed = true
-external_links_target_blank = true
-external_links_no_follow = true
-external_links_no_referrer = true
 
 default_language = "en"
 languages = [
     {code = "it", search = true}
+]
+
+taxonomies = [
+    { name = "test", lang = "en" },
+    { name = "test", lang = "it" },
 ]
 
 [translations]
@@ -29,6 +30,7 @@ content="Content"
 general = "General"
 encounters = "Encounters"
 authors = "Authors"
+toc = "Contents"
 
 footer_license = "Source code is released under the [ISC license](https://opensource.org/licenses/ISC) and is available on [GitHub](https://github.com/matteojoliveau/stories)"
 footer_cc = """
@@ -51,6 +53,7 @@ content = "Contenuti"
 general = "Generale"
 encounters = "Incontri"
 authors = "Autori"
+toc = "Indice"
 
 footer_license = "Codice sorgente rilasciato dietro [licenza ISC](https://opensource.org/licenses/ISC) e disponibile su [GitHub](https://github.com/matteojoliveau/stories)"
 footer_cc = """
@@ -58,6 +61,12 @@ Il contenuto di questo sito (qualunque testo e altri contenuti originali, inclus
 è concesso in licenza secondo i termini della [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License](https://creativecommons.org/licenses/by-nc-sa/4.0)
 se non diversamente specificato
 """
+
+[markdown]
+highlight_code = true
+external_links_target_blank = true
+external_links_no_follow = true
+external_links_no_referrer = true
 
 [extra]
 default_cover = "cover.jpg"

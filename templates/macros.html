@@ -1,9 +1,13 @@
-{%- macro is_page_active(name, recursive=false) -%}
+{%- macro locale_name(name) %}
     {%- if lang == config.default_language -%}
-        {%- set full_name = name ~ ".md" -%}
+        {{ name ~ ".md" }}
     {%- else -%}
-        {%- set full_name = name ~ "." ~ lang ~ ".md" -%}
+        {{ name ~ "." ~ lang ~ ".md" }}
     {%- endif -%}
+{%- endmacro %}
+
+{%- macro is_page_active(name, recursive=false) -%}
+    {%- set full_name = self::locale_name(name=name) -%}
 
     {%- set current = section | default(value=page) -%}
     {%- if current -%}
@@ -23,3 +27,36 @@
     {%- set slug = name | slugify -%}
     {{ get_url(path="@/authors/" ~ slug ~ ".md", lang=lang) }}
 {%- endmacro author_url -%}
+
+{%- macro toc(toc, class="") -%}
+    <aside class="box {{ class }}">
+        <div class="content">
+            <h4>{{ trans(key="toc", lang=lang) }}</h4>
+            <ol>
+                {% for h1 in page.toc %}
+                    <li>
+                        <a href="{{ h1.permalink | safe }}">{{ h1.title }}</a>
+                        {% if h1.children %}
+                            <ol>
+                                {% for h2 in h1.children %}
+                                    <li>
+                                        <a href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
+                                        {% if h2.children %}
+                                            <ol>
+                                                {% for h3 in h2.children %}
+                                                    <li>
+                                                        <a href="{{ h3.permalink | safe }}">{{ h3.title }}</a>
+                                                    </li>
+                                                {% endfor %}
+                                            </ol>
+                                        {% endif %}
+                                    </li>
+                                {% endfor %}
+                            </ol>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ol>
+        </div>
+    </aside>
+{%- endmacro toc -%}

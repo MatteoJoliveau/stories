@@ -1,6 +1,8 @@
+{%- set current = section | default(value=page) -%}
 <nav class="navbar has-shadow">
     <div class="navbar-brand">
-        <a class="navbar-item has-text-weight-bold" href="{{ get_url(path="@/_index.md", lang=lang) | safe }}">Stories</a>
+        <a class="navbar-item has-text-weight-bold"
+           href="{{ get_url(path="@/_index.md", lang=lang) | safe }}">Stories</a>
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
@@ -13,27 +15,31 @@
             <div class="navbar-item has-dropdown is-hoverable is-hidden-desktop">
                 <a class="navbar-link"><span class="icon"><i class="fas fa-dice-d20"></i></span> RPGs</a>
                 <div class="navbar-dropdown">
-                    <a class="navbar-item {{ macros::is_page_active(name="skyfarer/_index", recursive=true) }}" href="{{ get_url(path="@/skyfarer/_index.md", lang=lang) | safe }}">Skyfarer</a>
+                    <a class="navbar-item {{ macros::is_page_active(name="skyfarer/_index", recursive=true) }}"
+                       href="{{ get_url(path="@/skyfarer/_index.md", lang=lang) | safe }}">Skyfarer</a>
                 </div>
             </div>
 
-            <a href="{{ get_url(path="@/authors/_index.md", lang=lang) }}" class="navbar-item is-hidden-desktop {{ macros::is_page_active(name="authors/_index", recursive=true) }}">
+            <a href="{{ get_url(path="@/authors/_index.md", lang=lang) }}" class="navbar-item is-hidden-desktop
+                    {{ macros::is_page_active(name="authors/_index", recursive=true) }}">
                 <span class="icon"><i class="fas fa-user-friends"></i></span> {{ trans(key="authors", lang=lang) }}
             </a>
         </div>
 
         <div class="navbar-end">
-            <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">{{ lang | upper }}</a>
-                <div class="navbar-dropdown">
-                    {%- set root = section | default(value=page) -%}
-                    {%- if root -%}
-                        {%- for t in root.translations -%}
+            {%- if current.translations | length > 1 %}
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">{{ lang | upper }}</a>
+                    <div class="navbar-dropdown">
+                        {%- for t in current.translations -%}
+                            {%- if t.lang == lang -%}{%- continue -%}{%- endif -%}
                             <a class="navbar-item" href="{{ t.permalink | safe }}">{{ t.lang | upper }}</a>
                         {%- endfor -%}
-                    {%- endif -%}
+                    </div>
                 </div>
-            </div>
+            {%- else -%}
+                <a class="navbar-item">{{ lang | upper }}</a>
+            {%- endif -%}
         </div>
     </div>
 </nav>

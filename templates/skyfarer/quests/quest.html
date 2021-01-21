@@ -1,27 +1,31 @@
 {%- extends "skyfarer/base.html" -%}
 
 {%- block content -%}
-<h1 class="title">{{ page.title }}</h1>
-<div class="level">
-    <div class="level-left">
-        {%- if page.extra.author -%}
-        <a class="level-item" href="{{ macros::author_url(name=page.extra.author) }}">{{ page.extra.author }}</a>
-        {%- endif -%}
-        <p class="level-item">{{ trans(key="reading-time", lang=lang) }}: {{ page.reading_time }} {{
-            trans(key="minutes", lang=lang) }}</p>
+    <h1 class="title">{{ page.title }}</h1>
+    <div class="level">
+        <div class="level-left">
+            {%- if page.extra.author -%}
+                <a class="level-item"
+                   href="{{ macros::author_url(name=page.extra.author) }}">{{ page.extra.author }}</a>
+            {%- endif -%}
+            <p class="level-item">{{ trans(key="reading-time", lang=lang) }}: {{ page.reading_time }} {{ trans(key="minutes", lang=lang) }}</p>
+        </div>
+        <div class="level-right">
+        </div>
     </div>
-    {%- if page.translations | length > 0 -%}
-    <div class="level-right">
-        <p class="level-item">
-            {{ trans(key="available-in", lang=lang) }}
-            {%- for t in page.translations -%}
-            <a href="{{ t.permalink | safe }}">&nbsp;{{ t.lang | upper }}</a>
-            {%- endfor -%}
-        </p>
+    <hr />
+    {% if page.toc %}
+    <div class="level">
+        <div class="level-left">
+            {{ macros::toc(toc=page.toc, class="level-item") }}
+        </div>
+        <div class="level-right">
+        </div>
     </div>
-    {%- endif -%}
-</div>
-<div class="content is-medium">
-    {{ page.content | safe }}
-</div>
+    {%- endif %}
+
+    <div class="content is-medium">
+        {{ page.content | safe }}
+    </div>
+    </div>
 {%- endblock content -%}

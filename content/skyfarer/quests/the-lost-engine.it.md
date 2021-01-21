@@ -19,12 +19,25 @@ L'equipaggio è appena approdato a New Winchester e si sta godendo un meritato r
 - se decidono di cercare il capitano, scopriranno che una locomotiva priva di insegne è partita poco prima in tutta fretta, diretta verso nord
 - se decidono di indagare la Parzifal, scopriranno che aveva il compito di esplorare il Reach ma non fece più ritorno. Uno stralcio di giornale di un membro dell'equipaggio conservato al Gabriel's Archive parla di funghi
 
+## Sezioni
+
+### New Winchester
+
+### The Reach
+
+### Relitto della Parzifal
+
+### Finali
+#### Londra
+#### Hybras
+#### Traitor's Wood
+
 ## Informazioni
 - diario di un membro dell'equipaggio della Parzifal conservato al Gabriel's Archive. Descrive il penultimo viaggio nel Reach prima di sbarcare, lasciando la Parzifal prima del suo ultimo viaggio senza ritorno. Parla di funghi
 - ferrovieri alla stazione, hanno visto un gruppo di 5 persone, una delle quali probabilmente ubriaca e sorretta dalle altre, salire su una locomotiva nera senza insegne e partire in tutta fretta
 - 
 
-## Posti
+## Luoghi
 
 ### The Reach
 
