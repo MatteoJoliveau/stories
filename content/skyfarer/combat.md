@@ -139,7 +139,8 @@ Traits and conditions apply as usual. Failing an action may increase everyone's 
 
 ### Dodge
 
-Evade an incoming attack, avoiding all damage.
+Evade an incoming attack, avoiding all damage.  
+This action can be performed out of turn, when an enemy declares an attack.
 
 Skilled profession: **Navigator**
 
@@ -160,21 +161,21 @@ Skilled profession: **Stoker**
 
 ### Negotiate
 
-Convince an angry Marauder to let you go unharmed.
+Convince an angry Marauder to let you go unharmed.  
 That was so close it increases everyone's Peril by 1.
 
 Skilled professions: **Signaller, First Officer**
 
 ### Hawkeye
 
-A precise shot right between the eyes.
+A precise shot right between the eyes.  
 Automatically hit the next shot without needing to roll.
 
 Skilled profession: **Gunner**
 
 ### Resupply
 
-A bottle of mead can heal the strongest of fears.
+A bottle of mead can heal the strongest of fears.  
 Reduce everyone's Peril by 1.
 
 Skilled profession: **Quartermaster**
