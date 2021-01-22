@@ -51,8 +51,7 @@ appropriate Profession grants an additional dice to rolls, and the highest resul
   Players with the *Stoker* Profession are proficient with this station.
 - **The Communication Room** is used to signal other crafts and ports. It is used to intimidate enemies and convince
   them to comply, or desist from attacking the players.  
-  Players with the *Signaller* or *First Officer* Profession are
-  proficient with this station.
+  Players with the *Signaller* Profession is proficient with this station.
 
 One player can decide to perform only **one** of the following rolls per turn:
 
