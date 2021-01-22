@@ -41,7 +41,7 @@ Here is an example stats table for a *Star-Maddened Explorer*:
 ### Stations
 
 A sky engine has many stations the crew can man, each controlling a specific aspect of the locomotive. Any player can
-man any available station, but players with a specific Profession are more proficient at specific posts. Having the
+occupy any available station, but players with a specific Profession are more proficient at specific posts. Having the
 appropriate Profession grants an additional dice to rolls, and the highest result is used.
 
 - **The Helm** controls the direction of the locomotive. It is used to steer the engine, dodge incoming attack and hide.  
@@ -119,8 +119,8 @@ defending, the {{ veils() }} of the **helmsman** is used (since they are the one
 
 Conditions and traits are applied as usual. Only one trait and one condition can be applied per roll.
 
-Finally, the Profession of each player matters. If the player shooting the guns has the *Gunner* profession, it rolls
-**two dices** instead of one, discarding the lowest result. The *Navigator* player receives the same benefit when
+Finally, the Profession of each player matters. If the player shooting the guns has the *Gunner* profession, they roll
+**two dice** instead of one, discarding the lowest result. The *Navigator* player receives the same benefit when
 defending from an attack.
 
 > **Example**  
@@ -156,6 +156,7 @@ a `d6` and halving the result, rounding up). Every player's **Peril** increases 
 If the fight is proving too dangerous or the enemy too fierce, fleeing is the only option.
 The players can attempt to leave the fight by performing an {{ iron() }} roll-off.  
 The player manning the **Engine Room** rolls a `d10` and adds their {{ iron() }} modifier, plus any relevant Trait and Condition that may apply.
+If they have the *Stoker* profession, they roll **two dices** instead of one, discarding the lowest result.  
 
 The GM proceeds to do the same, rolling a `d10` plus the enemy {{ iron() }} modifier.
 
@@ -180,9 +181,25 @@ The amount of Peril is decided by the GM, but it's usually determined by a `d3` 
 
 ### Hiding
 
-Helm
+Sometimes, it is better to hide and let a threat pass by than to confront them. Sometimes, waiting for 
+a window of opportunity before striking a surprise blow may be the key to victory against a more powerful foe.
 
-`d10 + veils vs d10 + mirrors`
+Hiding allows the players to avoid being detected by an unknowing enemy, or to escape a chasing creature that is not allowing them
+to flee. The player at the **Helm** can try to conceal the engine, using their {{ veils() }} modifier and any Trait or Condition that may apply,
+by rolling-off a `d10` against the enemy {{ mirrors() }} stat. If they have the *Navigator* profession, they roll **two dices** instead of one, discarding the lowest result.
+
+If the player rolls higher, they manage to get out of sight and the enemy has to actively look for them next turn. This is their chance to sneak out and get out of trouble.
+Peril is not lowered, because they are not ouf of danger yet.
+
+If the GM rolls higher, the hiding attempt fails. The players lose their turn and the enemy has now an opportunity to blow. Peril may increase at the GM's discretion.
+
+> **Example**  
+> The swarm of Chorister Bee is upon them, but there may be a chance to avoid them by hiding in the mist behind the floating island.  
+> The player at the **Helm** have a {{ veils() }} modifier of `1`. Since they are the *Navigator*, they roll `2d10`, scoring `7` and `5`.
+> They keep the `7`, adding `1` from their stat for a total of `8`.  
+> The GM rolls a `d10` for each Bee,  plus `0` for their {{ mirrors() }}. The resulting `5` and `3` are not enough for them to detect the engine, silently plucked against the cold
+> rocks.  
+> They begin to hunt for them, angry that the thieves that stole their honey are getting away.
 
 ### Intimidating
 
@@ -192,16 +209,17 @@ Comms Room
 
 ### Actions
 
-Instead of one of the previous rolls, a player can decide to perform Actions are special rolls a player can perform that
+Instead of one of the previous rolls, a player can decide to perform an action. Actions are special rolls a player can perform that
 can have powerful effects or give an advantage during fights. Every action can be performed by anyone, however having a
 specific Profession grants an additional die to roll, keeping the highest result.
 
-GMs are encouraged to come up with new and exiting actions using this list as inspiration.
+Actions can be anything a crewmember can achieve. It can be using a portable loom to slow down or speed up time,
+dropping a decoy cargo crate to lure pirates away or signal a passing Stovepipe Dreadnought for help.
 
-Players cannot perform Actions in the same turn they attack, flee, hide or intimidate. Only one action can be performed
-per turn.
+A player that has rolled for attacking, fleeing, hiding or intimidating cannot perform an Action in the same turn. 
+Only one action can be performed per turn per player.
 
-Actions are performed by rolling a `d10` against a threshold set by the GM, based on the difficulty of the action in the
+Actions are performed by rolling a `d10` and add the relevant ability score to the result, against a threshold set by the GM based on the difficulty of the action in the
 current situation.  
 The core rules suggest the following values:
 
@@ -213,49 +231,23 @@ The core rules suggest the following values:
 
 Traits and conditions apply as usual. Failing an action may increase everyone's Peril if the outcome has some fallback.
 
-#### Dodge
+#### Example Actions
 
-Evade an incoming attack, avoiding all damage.  
-This action can be performed out of turn, when an enemy declares an attack.
+GMs are encouraged to come up with new and exiting actions using this list as inspiration.
 
-Skilled profession: **Navigator**
+##### Repair damages
 
-#### Repair damages
-
-Fix a leak in the hull, reducing an incoming Peril roll by 1.  
-Example: if this action succeeds, and the players scored a `2` when rolling a `d3` after getting hit, their Peril
-instead increases by `1`.
+Fix a leak in the hull, reducing everyone's Peril by 1.  
 
 Skilled profession: **Engineer**
 
-#### Overcharge the engine
+##### Overload the engine
 
 Run the boiler at increased pressure, granting more speed.  
 This action allows fleeing instantly without having to roll, but increases everyone's Peril by a `d3` since the engine
 risks exploding.
 
 Skilled profession: **Stoker**
-
-#### Negotiate
-
-Convince an angry Marauder to let you go unharmed.  
-That was so close it increases everyone's Peril by 1.
-
-Skilled professions: **Signaller, First Officer**
-
-#### Hawkeye
-
-A precise shot right between the eyes.  
-Automatically hit the next shot without needing to roll.
-
-Skilled profession: **Gunner**
-
-#### Resupply
-
-A bottle of mead can heal the strongest of fears.  
-Reduce everyone's Peril by 1.
-
-Skilled profession: **Quartermaster**
 
 ## Roll tables
 
