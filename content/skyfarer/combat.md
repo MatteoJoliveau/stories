@@ -26,9 +26,9 @@ Enemy engines and creatures have the same stats as players, and their value is u
 actions.
 
 <p>{{ iron() }}: strength actions, like dealing damage, fleeing or pursuing </p>
-<p>{{ mirrors() }}: aim and shoot, detect the players as they try to hide</p>
-<p>{{ veils() }}: avoid shots, hide from the players</p>
-<p>{{ hearts() }}: resist intimidation attempts</p>
+<p>{{ mirrors() }}: aiming and shooting, detect the enemy as they try to hide</p>
+<p>{{ veils() }}: avoid shots, hide from the enemy</p>
+<p>{{ hearts() }}: intimidate or resist intimidation</p>
 
 Here is an example stats table for a *Star-Maddened Explorer*:
 
