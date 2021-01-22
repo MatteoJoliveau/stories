@@ -117,7 +117,7 @@ defending, the {{ veils() }} of the **helmsman** is used (since they are the one
 
 Conditions and traits are applied as usual. Only one trait and one condition can be applied per roll.
 
-Finally, the Profession of each player matters. If the player shooting the guns has the *Gunner* profession, they roll
+Finally, the Profession of each player matters. If the player shooting the guns has the *Gunner* Profession, they roll
 **two dice** instead of one, discarding the lowest result. The *Navigator* player receives the same benefit when
 defending from an attack.
 
@@ -129,7 +129,7 @@ defending from an attack.
 > Since `9` is greater than `8`, the shot goes through.
 
 When an attack lands successfully, damages are rolled. Rolling a `d6` and adding the {{ iron() }} modifier of the gunner
-and any condition or trait modifier. As with the previous roll, having the *Gunner* profession grants an
+and any condition or trait modifier. As with the previous roll, having the *Gunner* Profession grants an
 additional `d10` and the highest result is used.
 
 > **Example**  
@@ -154,7 +154,7 @@ a `d6` and halving the result, rounding up). Every player's **Peril** increases 
 If the fight is proving too dangerous or the enemy too fierce, fleeing is the only option.
 The players can attempt to leave the fight by performing an {{ iron() }} roll-off.  
 The player manning the **Engine Room** rolls a `d10` and adds their {{ iron() }} modifier, plus any relevant Trait and Condition that may apply.
-If they have the *Stoker* profession, they roll **two dices** instead of one, discarding the lowest result.  
+If they have the *Stoker* Profession, they roll **two dice** instead of one, discarding the lowest result.  
 
 The GM proceeds to do the same, rolling a `d10` plus the enemy {{ iron() }} modifier.
 
@@ -184,7 +184,7 @@ a window of opportunity before striking a surprise blow may be the key to victor
 
 Hiding allows the players to avoid being detected by an unknowing enemy, or to escape a chasing creature that is not allowing them
 to flee. The player at the **Helm** can try to conceal the engine, using their {{ veils() }} modifier and any Trait or Condition that may apply,
-by rolling-off a `d10` against the enemy {{ mirrors() }} stat. If they have the *Navigator* profession, they roll **two dices** instead of one, discarding the lowest result.
+by rolling-off a `d10` against the enemy {{ mirrors() }} stat. If they have the *Navigator* Profession, they roll **two dice** instead of one, discarding the lowest result.
 
 If the player rolls higher, they manage to get out of sight and the enemy has to actively look for them next turn. This is their chance to sneak out and get out of trouble.
 Peril is not lowered, because they are not ouf of danger yet.
@@ -201,9 +201,24 @@ If the GM rolls higher, the hiding attempt fails. The players lose their turn an
 
 ## Intimidating
 
-Comms Room
+Some enemies can be scared into leaving you alone. A small Marauder engine might decide you
+are not worth the risk and abandon their intention of pillaging your hold, if players shout loud enough.
 
-`d10 + hearts vs d10 + hearts`
+The **Communications Room** contains the appropriate equipment to send messages to other crafts or creatures, such as
+signal lamps, flags and megaphones. A player can attempt an *intimidation* check to see if they manage to convince or scare
+the enemy into leaving the fight.
+
+This is done with a `d10` roll-off between the parties {{ hearts() }} stats, including any Trait or Condition that may apply.
+If the player performing the roll has the *Signaller* Profession they may roll **two dice** instead of one, keeping the highest result.
+
+If the players are successful, the enemy is scared and leaves the fight immediately, otherwise the fight goes on, and the player's Peril is increased by a `d3`.
+
+> **Example**  
+> A small Marauder engine is bravely attempting to ram the players, determined to rob them of their precious cargo.  
+> One player takes a megaphone from the **Communications Room** and starts threatening the enemy, promising horrible things will happen if they manage to get close enough.
+> They roll a `d10` and add their {{ hearts() }} modifier of `2`. The Condition *Enraged* grants them an additional `+1`. They roll a `4`, for a total of `7`. 
+> The GM rolls a `d10` plus `1` for the Marauder {{ hearts() }}. However they receive a `-1` penalty from their engine being *Tiny*. Scoring a `5` but resulting in a `6` with all modifiers applied, they are scared off
+> and run away with their tail between their legs.  
 
 ## Actions
 
@@ -237,7 +252,7 @@ GMs are encouraged to come up with new and exiting actions using this list as in
 
 Fix a leak in the hull, reducing everyone's Peril by 1.  
 
-Skilled profession: **Engineer**
+Skilled Profession: **Engineer**
 
 #### Overload the engine
 
@@ -245,7 +260,7 @@ Run the boiler at increased pressure, granting more speed.
 This action allows fleeing instantly without having to roll, but increases everyone's Peril by a `d3` since the engine
 risks exploding.
 
-Skilled profession: **Stoker**
+Skilled Profession: **Stoker**
 
 ## Roll tables
 
