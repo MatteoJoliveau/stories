@@ -7,7 +7,7 @@ generate_feed = true
 
 default_language = "en"
 languages = [
-    {code = "it", search = true}
+    { code = "it", search = true }
 ]
 
 taxonomies = [
@@ -18,19 +18,20 @@ taxonomies = [
 [translations]
 [translations.en]
 by = "by"
-nothing-here="Uh oh, there is nothing here"
-available-in="Available in"
+nothing-here = "Uh oh, there is nothing here"
+available-in = "Available in"
 sections = "Sections"
 pages = "Pages"
 search = "Search"
 back-to-quests = "Back to quests"
 reading-time = "Reading time"
 minutes = "minutes"
-content="Content"
+content = "Content"
 general = "General"
 encounters = "Encounters"
 authors = "Authors"
 toc = "Contents"
+last-updated = "Last updated"
 
 footer_license = "Source code is released under the [ISC license](https://opensource.org/licenses/ISC) and is available on [GitHub](https://github.com/matteojoliveau/stories)"
 footer_cc = """
@@ -41,8 +42,8 @@ unless otherwise specified
 
 [translations.it]
 by = "di"
-nothing-here="Uh oh, non c'è niente qui"
-available-in="Disponibile in"
+nothing-here = "Uh oh, non c'è niente qui"
+available-in = "Disponibile in"
 sections = "Sezioni"
 pages = "Pagine"
 search = "Cerca"
@@ -54,6 +55,7 @@ general = "Generale"
 encounters = "Incontri"
 authors = "Autori"
 toc = "Indice"
+last-updated = "Ultima modifica"
 
 footer_license = "Codice sorgente rilasciato dietro [licenza ISC](https://opensource.org/licenses/ISC) e disponibile su [GitHub](https://github.com/matteojoliveau/stories)"
 footer_cc = """
