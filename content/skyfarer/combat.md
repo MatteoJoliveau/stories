@@ -1,7 +1,7 @@
 +++
-title = "Combat"
+title = "Sky Combat"
 template = "skyfarer/page.html"
-description = "A detailed combat module for Skyfarer"
+description = "A detailed engine-to-engine combat module for Skyfarer"
 draft = false
 date = 2021-01-21
 updated = 2021-01-22
@@ -10,8 +10,6 @@ updated = 2021-01-22
 icon = "fas fa-fist-raised"
 cover = "skyfarer/sunlesskies.webp"
 +++
-
-# Engine-to-engine combat
 
 The skies are a harsh and unwelcoming place. Players will face nightmarish monsters, star-maddened bandits and imposing
 engines determined to wipe them out.  
@@ -22,7 +20,7 @@ This system focuses on the players and their role aboard the engine, so that eve
 the fight even if they are not steering or shooting. It borrows from other RPG systems while trying to stay true to
 Skyfarer's rules and mechanics.
 
-## Stats and rolls
+## Stats
 
 Enemy engines and creatures have the same stats as players, and their value is used as a modifier for various combat
 actions.
@@ -38,7 +36,7 @@ Here is an example stats table for a *Star-Maddened Explorer*:
 |------|---------|-------|--------|
 |  2   |    0    |   -1   |   1   |
 
-### Stations
+## Stations
 
 A sky engine has many stations the crew can man, each controlling a specific aspect of the locomotive. Any player can
 occupy any available station, but players with a specific Profession are more proficient at specific posts. Having the
@@ -69,9 +67,18 @@ If no-one is controlling the locomotive, the incoming attack automatically lands
 Additionally, any player not engaged in any roll can attempt to perform an [Action](#actions). Only one action can be
 performed per turn, per player.
 
-### Initiative
+### Changing stations
 
-At the beginning of the fight everyone rolls for initiative to determine the turn order. Rolling is done with a `d10`
+Players can choose to hop in or out of a station as a free action at the beginning of each turn, for example
+to perform a special action that requires another station.
+
+> **Example**  
+> At the beginning of the turn, the gunner leaves the main cannon and rushes to the **Communications Room**.
+> It then proceeds to bark mean swears and colourful insults to the enemy Dreadnought, attempting to *intimidate* it.
+> 
+## Initiative
+
+At the beginning of the fight everyone rolls for initiative to determine the turn order. This is done by rolling a `d10`
 and adding the {{ hearts() }} modifier. Traits and conditions apply as usual. For example, an engine with the *Fast*
 trait receives a `+1`, while being *Slow* on the other hand gives a `-1` modifier. The GM ranks every participant in the
 fight in order of result, from highest to lowest. Each participant will play in this order until the end of the fight.
@@ -83,7 +90,7 @@ is chosen for the entire crew.
 > The players are attacked by two Chorister Bees. They have a {{ hearts() }} stat of `1`.  
 > The players roll `3d10`, one each, and score the following (adding their {{ hearts() }} stat):  
 > `d10 + 1 = (8) + 1 = 9`  
-> `d10 + 0 = (2) + 1 = 3`  
+> `d10 + 0 = (2) + 0 = 2`  
 > `d10 - 1 = (7) - 1 = 6`  
 > They keep the highest result, which is `9`.  
 > The GM rolls `2d10` (one for each creature) and adds `1` for their {{ hearts() }}:  
@@ -94,20 +101,11 @@ is chosen for the entire crew.
 > 2) Players
 > 3) Chorister Bee
 
-### Choosing stations
-
-Before the fight begins, players have to choose their station. They can also remain on deck, ready to 
+After rolling for initiative, but before the fight begins, players have to choose their station. They can also remain on deck, ready to
 move and do their part. It is recommended that at least the **Helm** and **Guns** are manned, otherwise they won't be able
 to attack or defend themselves.
 
-Players can choose to hop in or out of a station as a free action at the beginning of each turn, for example
-to perform a special action that requires another station.
-
-> **Example**  
-> At the beginning of the turn, the gunner leaves the main cannon and rushes to the **Communications Room**.
-> It then proceeds to bark mean swears and colourful insults to the enemy Dreadnought, attempting to *intimidate* it.
-
-### Attacking
+## Attacking
 
 Attacks consist of two dice rolls, a `d10` for hitting and a `d6` for damages.
 
@@ -151,7 +149,7 @@ recommended amount of hit-points based on the difficulty of the challenge.
 Players don't have HPs. Instead, getting hit by an enemy increases their **Peril** by the result of a `d3` roll (rolling
 a `d6` and halving the result, rounding up). Every player's **Peril** increases simultaneously by this amount.
 
-### Fleeing
+## Fleeing
 
 If the fight is proving too dangerous or the enemy too fierce, fleeing is the only option.
 The players can attempt to leave the fight by performing an {{ iron() }} roll-off.  
@@ -179,7 +177,7 @@ The amount of Peril is decided by the GM, but it's usually determined by a `d3` 
 > The GM rolls a `d10` plus `2` for the explorer's {{ iron() }}. The resulting `6` is higher than the players' result, so their attempt to flee fails.  
 > Furious, the *star-maddened explorer* charges right at them, trying to ram their engine. The GM rolls a `d3`, scoring a `2`. Their Peril therefore increases by `2`
 
-### Hiding
+## Hiding
 
 Sometimes, it is better to hide and let a threat pass by than to confront them. Sometimes, waiting for 
 a window of opportunity before striking a surprise blow may be the key to victory against a more powerful foe.
@@ -201,13 +199,13 @@ If the GM rolls higher, the hiding attempt fails. The players lose their turn an
 > rocks.  
 > They begin to hunt for them, angry that the thieves that stole their honey are getting away.
 
-### Intimidating
+## Intimidating
 
 Comms Room
 
 `d10 + hearts vs d10 + hearts`
 
-### Actions
+## Actions
 
 Instead of one of the previous rolls, a player can decide to perform an action. Actions are special rolls a player can perform that
 can have powerful effects or give an advantage during fights. Every action can be performed by anyone, however having a
@@ -231,17 +229,17 @@ The core rules suggest the following values:
 
 Traits and conditions apply as usual. Failing an action may increase everyone's Peril if the outcome has some fallback.
 
-#### Example Actions
+### Example Actions
 
 GMs are encouraged to come up with new and exiting actions using this list as inspiration.
 
-##### Repair damages
+#### Repair damages
 
 Fix a leak in the hull, reducing everyone's Peril by 1.  
 
 Skilled profession: **Engineer**
 
-##### Overload the engine
+#### Overload the engine
 
 Run the boiler at increased pressure, granting more speed.  
 This action allows fleeing instantly without having to roll, but increases everyone's Peril by a `d3` since the engine
