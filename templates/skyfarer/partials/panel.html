@@ -13,6 +13,7 @@
 {# Template #}
 <div class="panel mt-4">
     <p class="panel-heading">Skyfarer</p>
+    {%- if config.build_search_index %}
     <div id="search-container" class="panel-block dropdown">
         <p class="control has-icons-left has-tooltip-arrow" data-tooltip="Coming soon">
             <input class="input" type="search" id="search" name="search"
@@ -25,6 +26,7 @@
             <div id="search-results" class="dropdown-content"></div>
         </div>
     </div>
+    {%- endif %}
     {%- set is_general_tab = is_generic_page or is_root_section -%}
     <p class="panel-tabs">
         <a class="{%- if is_general_tab -%}is-active{%- endif -%}"
