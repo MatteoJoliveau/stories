@@ -216,7 +216,7 @@ If the players are successful, the enemy is scared and leaves the fight immediat
 > A small Marauder engine is bravely attempting to ram the players, determined to rob them of their precious cargo.  
 > One player takes a megaphone from the **Communications Room** and starts threatening the enemy, promising horrible things will happen if they manage to get close enough.
 > They roll a `d10` and add their {{ hearts() }} modifier of `2`. The Condition *Enraged* grants them an additional `+1`. They roll a `4`, for a total of `7`. 
-> The GM rolls a `d10` plus `1` for the Marauder {{ hearts() }}. However they receive a `-1` penalty from their engine being *Tiny*. Scoring a `5` but resulting in a `6` with all modifiers applied, they are scared off
+> The GM rolls a `d10`, plus `0` for the Marauder {{ hearts() }}. However they receive a `-1` penalty from their engine being *Tiny*. Scoring a `5` but resulting in a `4` with all modifiers applied, they are scared off
 > and run away with their tail between their legs.  
 
 ## Actions
