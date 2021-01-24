@@ -25,7 +25,7 @@ Skyfarer's rules and mechanics.
 Enemy engines and creatures have the same stats as players, and their value is used as a modifier for various combat
 actions.
 
-<p>{{ iron() }}: strength actions, like dealing damage, fleeing or pursuing </p>
+<p>{{ iron() }}: strength actions, like fleeing or pursuing </p>
 <p>{{ mirrors() }}: aim and shoot, detect the enemy as they try to hide</p>
 <p>{{ veils() }}: avoid shots, hide from the enemy</p>
 <p>{{ hearts() }}: intimidate or resist intimidation</p>
@@ -61,7 +61,7 @@ One player can decide to perform only **one** of the following rolls per turn:
 - [Intimidating](#intimidating) (requires **The Communication Room** to be manned)
 
 Despite not being an action per se, *defending* from an attack requires **The Helm** to be manned.
-If no-one is controlling the locomotive, the incoming attack automatically lands without rolling the hit die.
+If no-one is controlling the locomotive it is easier for the attacker to hit it, although there is still a chance for it to miss the shot.
 
 Additionally, any player not engaged in any roll can attempt to perform an [Action](#actions). Only one action can be
 performed per turn, per player.
@@ -75,41 +75,16 @@ to perform a special action that requires another station.
 > At the beginning of the turn, the gunner leaves the main cannon and rushes to the **Communications Room**.
 > It then proceeds to bark mean swears and colourful insults to the enemy Dreadnought, attempting to *intimidate* it.
 > 
-## Initiative
 
-At the beginning of the fight everyone rolls for initiative to determine the turn order. This is done by rolling a `d10`
-and adding the {{ hearts() }} modifier. Traits and conditions apply as usual. For example, an engine with the *Fast*
-trait receives a `+1`, while being *Slow* on the other hand gives a `-1` modifier. The GM ranks every participant in the
-fight in order of result, from highest to lowest. Each participant will play in this order until the end of the fight.
-
-The players act as a single entity. They each roll their own initiative, adding their own modifier, and the highest roll
-is chosen for the entire crew.
-
-> **Example**  
-> The players are attacked by two Chorister Bees. They have a {{ hearts() }} stat of `1`.  
-> The players roll `3d10`, one each, and score the following (adding their {{ hearts() }} stat):  
-> `d10 + 1 = (8) + 1 = 9`  
-> `d10 + 0 = (2) + 0 = 2`  
-> `d10 - 1 = (7) - 1 = 6`  
-> They keep the highest result, which is `9`.  
-> The GM rolls `2d10` (one for each creature) and adds `1` for their {{ hearts() }}:  
-> `d10 + 1 = (9) + 1 = 10`  
-> `d10 + 1 = (7) + 1 = 8`  
-> The order of action will therefore be:
-> 1) Chorister Bee
-> 2) Players
-> 3) Chorister Bee
-
-After rolling for initiative, but before the fight begins, players have to choose their station. They can also remain on deck, ready to
-move and do their part. It is recommended that at least the **Helm** and **Guns** are manned, otherwise they won't be able
-to attack or defend themselves.
+<!-- TODO: no initiative, free-flowing turns based on narrative -->
 
 ## Attacking
 
 Attacks consist of two dice rolls, a `d10` for hitting and a `d6` for damages.
 
 The `d10` is a roll-off between the {{ mirrors() }} of the attacker and the {{ veils() }} of the defender. If the
-attacker rolls higher, the attack goes through. If the defender rolls higher, the attack misses.
+attacker rolls higher, the attack goes through. If the defender rolls higher, the attack misses.  
+However, if the **Helm** is unmanned, the attacker rolls against a set threshold as if it was a regular {{ mirrors() }} check, plus any relevant Trait and Condition that may apply. A good threshold for most situations is `2`, but GMs may decide to be set it to a higher value to increase the difficulty.
 
 When the players are attacking, the {{ mirrors() }} of the player manning the **Guns** is used. When the players are
 defending, the {{ veils() }} of the **helmsman** is used (since they are the one trying to avoid the shot).
@@ -127,12 +102,10 @@ defending from an attack.
 > The GM rolls a `d10` for the enemy, getting a `6` plus the {{ veils() }} modifier. Since the enemy engine has the trait *Tiny*, it gets an additional `+1` modifier for a total of `8`.  
 > Since `9` is greater than `8`, the shot goes through.
 
-When an attack lands successfully, damages are rolled. Rolling a `d6` and adding the {{ iron() }} modifier of the gunner
-and any condition or trait modifier. As with the previous roll, having the *Gunner* Profession grants an
-additional `d10` and the highest result is used.
+When an attack lands successfully, damages are rolled. Rolling a `d3` and adding any condition or trait modifier. 
 
 > **Example**  
-> The gunner rolls a `d6` and gets a `3`, plus `2` from their {{ iron() }}. The player's engine has the trait *Up-gunned*, so it gets an additional `+1` to damages, totalling `6` damages.  
+> The gunner rolls a `d3` and gets a `3`. The player's engine has the trait *Up-gunned*, so it gets an additional `+1` to damages, totalling `4` damages.  
 > However, the enemy engine is *Heavily armoured*, so it applies a `-1` modifier to the roll. This results in a total of `5` damages being dealt.
 
 The amount of damage an NPC engine or creature can sustain is determined by the GM. The following table contains a
@@ -140,10 +113,10 @@ recommended amount of hit-points based on the difficulty of the challenge.
 
 |     Challenge     |   HPs   |
 |-------------------|---------|
-|    low            |  5-10   |
-|    medium         |  10-30  |
-|    high           |  30-50  |
-|    nightmarish    |  50+    |
+|    low            |  2-5    |
+|    medium         |  5-15   |
+|    high           |  15-25  |
+|    nightmarish    |  25+    |
 
 Players don't have HPs. Instead, getting hit by an enemy increases their **Peril** by the result of a `d3` roll (rolling
 a `d6` and halving the result, rounding up). Every player's **Peril** increases simultaneously by this amount.
@@ -194,8 +167,7 @@ If the GM rolls higher, the hiding attempt fails. The players lose their turn an
 > The swarm of Chorister Bee is upon them, but there may be a chance to avoid them by hiding in the mist behind the floating island.  
 > The player at the **Helm** have a {{ veils() }} modifier of `1`. Since they are the *Navigator*, they roll `2d10`, scoring `7` and `5`.
 > They keep the `7`, adding `1` from their stat for a total of `8`.  
-> The GM rolls a `d10` for each Bee,  plus `0` for their {{ mirrors() }}. The resulting `5` and `3` are not enough for them to detect the engine, silently plucked against the cold
-> rocks.  
+> The GM rolls a `d10` for each Bee,  plus `0` for their {{ mirrors() }}. The resulting `5` and `3` are not enough for them to detect the engine, silently plucked against the cold rocks.  
 > They begin to hunt for them, angry that the thieves that stole their honey are getting away.
 
 ## Intimidating
@@ -231,8 +203,7 @@ dropping a decoy cargo crate to lure pirates away or signal a passing Stovepipe 
 A player that has rolled for attacking, fleeing, hiding or intimidating cannot perform an Action in the same turn. 
 Only one action can be performed per turn per player.
 
-Actions are performed by rolling a `d10` and add the relevant ability score to the result, against a threshold set by the GM based on the difficulty of the action in the
-current situation.  
+Actions are performed by rolling a `d10` and add the relevant ability score to the result, against a threshold set by the GM based on the difficulty of the action in the current situation.  
 The core rules suggest the following values:
 
 |     Challenge     |   Success value   |
@@ -250,6 +221,8 @@ GMs are encouraged to come up with new and exiting actions using this list as in
 #### Repair damages
 
 Fix a leak in the hull, reducing everyone's Peril by 1.  
+Attempting to repair the locomotive is performed with a {{ hearts() }} check. In alternative to rolling, players may choose to 
+spend Tenacity instead, lowering Peril on a one-for-one basis.
 
 Skilled Profession: **Engineer**
 
@@ -257,9 +230,14 @@ Skilled Profession: **Engineer**
 
 Run the boiler at increased pressure, granting more speed.  
 This action allows fleeing instantly without having to roll, but increases everyone's Peril by a `d3` since the engine
-risks exploding.
+risks exploding. The player performing the action rolls adding their {{ iron() }} modifier to check if they succeed.
 
 Skilled Profession: **Stoker**
+
+#### Helping Hand
+
+A player can help another player performing an Action, giving them the *Helped* Condition.  
+They roll one `d10`, adding the highest of the two relevant modifiers, plus an additional `+1` for the *Helped* Condition. If one of the players involved has the relevant Profession for the action, two dice are rolled.
 
 ## Roll tables
 
