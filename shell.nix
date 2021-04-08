@@ -7,5 +7,7 @@ pkgs.mkShell {
       unstable.zola
       nodejs-14_x
       yarn
+      pandoc
+      texlive.combined.scheme-small 
     ];
 }

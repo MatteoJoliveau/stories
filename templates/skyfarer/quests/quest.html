@@ -11,6 +11,17 @@
             <p class="level-item">{{ trans(key="reading-time", lang=lang) }}: {{ page.reading_time }} {{ trans(key="minutes", lang=lang) }}</p>
         </div>
         <div class="level-right">
+            {%- if page.date %}
+                <p class="level-item">
+                    <em>{{ trans(key="published", lang=lang) }}: {{ page.date | date(format="%F", lang=lang) }}</em>
+                </p>
+            {%- endif %}
+
+            {%- if page.updated %}
+                <p class="level-item">
+                    <em>{{ trans(key="last-updated", lang=lang) }}: {{ page.updated | date(format="%F", lang=lang) }}</em>
+                </p>
+            {%- endif %}
         </div>
     </div>
     <hr />

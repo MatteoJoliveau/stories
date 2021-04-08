@@ -1,14 +1,21 @@
 +++
 title = "The Lost Engine"
-description = "Una locomotiva dispersa e un mistero dal passato. Nulla può prepararli a ciò che troveranno"
+description = "Una locomotiva dispersa. Un mistero dal passato. Nulla può prepararli a ciò che troveranno"
 draft = true
 date = "2020-01-21"
-updated = "2020-01-21"
+updated = "2020-01-26"
 
 [extra]
 author = "Matteo Joliveau"
 cover = "skyfarer/quests/skyfarer-wreck.jpg"
 +++
+
+## Background
+
+La Parzifal fu la prima locomotiva ad attraversare il [Gate of the Avid Horizon](https://sunlessskies.gamepedia.com/Avid_Horizon), il portale
+tra Terra e High Wilderness attraverso cui la Regina portò Londra nel cielo. L'antica ma potente locomotiva aveva il compito di esplorare il cielo
+oltre Albion e mappare nuovi territori per l'Impero. Partì per il Reach e non fece più ritorno.
+
 
 L'equipaggio è appena approdato a New Winchester e si sta godendo un meritato riposo
 
@@ -18,19 +25,6 @@ L'equipaggio è appena approdato a New Winchester e si sta godendo un meritato r
 - l'equipaggio può ora cercare di trovare il capitano a New Winchester, oppure trovare il relitto della Parzifal (che è palesemente di interesse per qualcuno oltre a loro). Probabile che i rapitori vogliano usare il capitano per farsi portare li
 - se decidono di cercare il capitano, scopriranno che una locomotiva priva di insegne è partita poco prima in tutta fretta, diretta verso nord
 - se decidono di indagare la Parzifal, scopriranno che aveva il compito di esplorare il Reach ma non fece più ritorno. Uno stralcio di giornale di un membro dell'equipaggio conservato al Gabriel's Archive parla di funghi
-
-## Sezioni
-
-### New Winchester
-
-### The Reach
-
-### Relitto della Parzifal
-
-### Finali
-#### Londra
-#### Hybras
-#### Traitor's Wood
 
 ## Informazioni
 - diario di un membro dell'equipaggio della Parzifal conservato al Gabriel's Archive. Descrive il penultimo viaggio nel Reach prima di sbarcare, lasciando la Parzifal prima del suo ultimo viaggio senza ritorno. Parla di funghi
@@ -56,11 +50,11 @@ https://sunlessskies.gamepedia.com/New_Winchester
 
 https://sunlessskies.gamepedia.com/Traitor%27s_Wood
 
-- Logging outpust di Ravenscourt e Stamford
+- Logging outppst di Ravenscourt e Stamford
 - The Parting Glade
 - The Wood's Edge
 
-## Encounters
+## Incontri e PNG
 
 ### Colonised Cantankeri
 
@@ -76,6 +70,10 @@ Grado di sfida:
 - medio: [Bedivere-Class Escort](https://sunlessskies.gamepedia.com/Bedivere-Class_Escort)
 - difficile: [Medea-Class Destroyer](https://sunlessskies.gamepedia.com/Medea-Class_Destroyer)
 
+## Finali
+### Londra
+### Hybras
+### Traitor's Wood
 
 https://sunlessskies.gamepedia.com/The_Reach
 https://sunlessskies.gamepedia.com/Approaching_the_Parzifal

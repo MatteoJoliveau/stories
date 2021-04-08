@@ -8,12 +8,17 @@
     <div class="level">
         <div class="level-left">
             {%- if page.description -%}
-                <p>{{ page.description }}</p>
+                <p class="level-item">{{ page.description }}</p>
             {%- endif -%}
         </div>
         <div class="level-right">
+            {%- if page.date %}
+                <p class="level-item">
+                    <em>{{ trans(key="published", lang=lang) }}: {{ page.date | date(format="%F", lang=lang) }}</em>
+                </p>
+            {%- endif %}
             {%- if page.updated %}
-                <p>
+                <p class="level-item">
                     <em>{{ trans(key="last-updated", lang=lang) }}: {{ page.updated | date(format="%F", lang=lang) }}</em>
                 </p>
             {%- endif %}
