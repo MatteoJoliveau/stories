@@ -1,6 +1,6 @@
 +++
 title = "Combattimento"
-template = "skyfarer/page.html"
+template = "rpg/page.html"
 description = "Supplemento per Skyfarer sul combattimento tra locomotive"
 draft = true
 date = 2021-01-21

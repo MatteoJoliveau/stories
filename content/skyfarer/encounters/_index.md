@@ -1,7 +1,7 @@
 +++
 title = "Encounters"
-template = "skyfarer/encounters/index.html"
-page_template = "skyfarer/encounters/encounter.html"
+template = "rpg/subsections/section.html"
+page_template = "rpg/subsections/page.html"
 
 [extra]
 icon = "fas fa-dragon"

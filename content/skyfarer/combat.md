@@ -1,6 +1,6 @@
 +++
 title = "Sky Combat"
-template = "skyfarer/page.html"
+template = "rpg/page.html"
 description = "A detailed engine-to-engine combat module for Skyfarer"
 draft = false
 date = 2021-01-21

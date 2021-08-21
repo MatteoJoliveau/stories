@@ -1,6 +1,6 @@
 +++
 title = "Skyfarer"
-template = "skyfarer/index.html"
+template = "rpg/index.html"
 +++
 
 [Skyfarer] è un gioco di ruolo cartaceo ambientato nell'universo di [Fallen London], in particolare nell'ambientazione

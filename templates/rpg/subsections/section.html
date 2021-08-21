@@ -1,6 +1,6 @@
-{%- extends "skyfarer/base.html" -%}
+{%- extends "rpg/base.html" -%}
 
-{%- block title -%}Quests | Skyfarer{%- endblock title -%}
+{%- block title -%}Quests | {{ section.title }}{%- endblock title -%}
 
 {%- block content -%}
 <h1 class="title">{{ section.title }}</h1>
@@ -8,7 +8,7 @@
     {{ section.content | safe }}
 </div>
 
-<h2 class="subtitle">Quests</h2>
+<h2 class="subtitle">{{ section.title }}</h2>
 <ul>
     {%- for page in section.pages -%}
         <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a>{%- if page.extra.author %} {{ trans(key="by", lang=lang) }} <a href="{{ macros::author_url(name=page.extra.author) }}">{{ page.extra.author }}</a>{%- endif -%}</li>

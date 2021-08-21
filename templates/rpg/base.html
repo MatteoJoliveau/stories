@@ -1,15 +1,15 @@
 {%- import "macros.html" as macros -%}
+{%- set current_section = section | default(value=get_section(path=page.ancestors | last)) -%}
+
 <!doctype html>
 <html lang="{{ lang }}" prefix="og: http://ogp.me/ns#">
 <head>
     {%- include "partials/head.html" -%}
     <title>{%- block title -%}
         {%- if page -%}
-            {{ page.title }} | Skyfarer
+            {{ page.title }} | {{ current_section.title }}
         {%- elif section -%}
-            {{ section.title }} | Skyfarer
-        {%- else -%}
-            Skyfarer
+            {{ section.title }}
         {%- endif -%}
     {%- endblock -%}</title>
 </head>
@@ -19,7 +19,7 @@
 <div class="columns is-fullheight">
     <aside class="column is-4-tablet is-3-widescreen is-2-ultrawide is-hidden-touch is-fullheight section">
         {%- include "partials/sidemenu.html" -%}
-        {%- include "skyfarer/partials/panel.html" -%}
+        {%- include "rpg/partials/panel.html" -%}
     </aside>
 
     <div class="column">
@@ -30,7 +30,7 @@
         </section>
 
         <section class="section is-hidden-desktop">
-            {%- include "skyfarer/partials/panel.html" -%}
+            {%- include "rpg/partials/panel.html" -%}
         </section>
     </div>
 </div>

@@ -4,6 +4,7 @@
     "scripts": {
         "build": "parcel build assets/scripts/main.js --out-dir static --no-source-maps",
         "watch": "parcel watch assets/scripts/main.js --out-dir static --no-hmr --no-source-maps",
+        "serve": "concurrently --kill-others \"yarn watch\" \"zola serve\"",
         "clean": "rimraf -g static/**/*.css static/**/*.js public"
     },
     "dependencies": {
@@ -12,6 +13,7 @@
         "bulma": "^0.9.1"
     },
     "devDependencies": {
+        "concurrently": "^6.2.1",
         "parcel-bundler": "^1.12.4",
         "rimraf": "^3.0.2",
         "sass": "^1.32.4"

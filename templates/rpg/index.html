@@ -1,9 +1,10 @@
-{%- extends "skyfarer/base.html" -%}
+{%- extends "rpg/base.html" -%}
 
-{%- block title -%}{{ trans(key="encounters", lang=lang) }} | Skyfarer{%- endblock title -%}
+{%- block title -%}{{ section.title }}{%- endblock title -%}
 
 {%- block content -%}
 <h1 class="title">{{ section.title }}</h1>
+
 <div class="content">
     {{ section.content | safe }}
 </div>

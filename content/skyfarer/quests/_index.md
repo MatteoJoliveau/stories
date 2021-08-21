@@ -1,7 +1,7 @@
 +++
 title = "Quests"
-template = "skyfarer/quests/index.html"
-page_template = "skyfarer/quests/quest.html"
+template = "rpg/subsections/section.html"
+page_template = "rpg/subsections/page.html"
 
 [extra]
 icon = "fa fa-book"

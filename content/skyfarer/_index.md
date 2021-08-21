@@ -1,6 +1,6 @@
 +++
 title = "Skyfarer"
-template = "skyfarer/index.html"
+template = "rpg/index.html"
 +++
 
 [Skyfarer] is a pen-and-paper RPG set in the universe of [Fallen London], specifically in the same

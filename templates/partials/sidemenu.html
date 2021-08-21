@@ -2,6 +2,9 @@
 {%- set sky_root_url = get_url(path="@/skyfarer/_index.md", lang=lang) | safe -%}
 {%- set skyfarer = get_section(path="skyfarer/_index.md") -%}
 
+{%- set unnamed_root_url = get_url(path="@/unnamed/_index.md", lang=lang) | safe -%}
+{%- set unnamed = get_section(path="unnamed/_index.md") -%}
+
 <div class="menu">
     <p class="menu-label">Navigation</p>
     <ul class="menu-list">
@@ -19,6 +22,11 @@
                 <li>
                     <a href="{{ sky_root_url }}" class="{{ macros::is_page_active(name="skyfarer/_index", recursive=true) }}">
                         {{ skyfarer.title }}
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ unnamed_root_url }}" class="{{ macros::is_page_active(name=" unnamed/_index", recursive=true) }}">
+                        {{ unnamed.title }}
                     </a>
                 </li>
             </ul>
