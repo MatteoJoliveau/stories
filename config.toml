@@ -10,11 +10,6 @@ languages = [
     { code = "it", search = true }
 ]
 
-taxonomies = [
-    { name = "test", lang = "en" },
-    { name = "test", lang = "it" },
-]
-
 [translations]
 [translations.en]
 by = "by"
@@ -36,7 +31,7 @@ last-updated = "Last updated"
 
 footer_license = "Source code is released under the [ISC license](https://opensource.org/licenses/ISC) and is available on [GitHub](https://github.com/matteojoliveau/stories)"
 footer_cc = """
-The content of this website (any text, copy and original content, including but not limited to stories, settings and names)
+The content of this website (any text, copy and original content, including but not limited to stories, settings, names and artworks)
 is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License](https://creativecommons.org/licenses/by-nc-sa/4.0)
 unless otherwise specified
 """
@@ -61,7 +56,7 @@ last-updated = "Ultima modifica"
 
 footer_license = "Codice sorgente rilasciato dietro [licenza ISC](https://opensource.org/licenses/ISC) e disponibile su [GitHub](https://github.com/matteojoliveau/stories)"
 footer_cc = """
-Il contenuto di questo sito (qualunque testo e altri contenuti originali, inclusi ma non limitati a storie, ambientazioni e nomi)
+Il contenuto di questo sito (qualunque testo e altri contenuti originali, inclusi ma non limitati a storie, ambientazioni, nomi e materiale grafico)
 è concesso in licenza secondo i termini della [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License](https://creativecommons.org/licenses/by-nc-sa/4.0)
 se non diversamente specificato
 """

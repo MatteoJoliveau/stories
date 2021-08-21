@@ -2,6 +2,9 @@
 
 {%- block content -%}
 <h1 class="title">{{ page.title }}</h1>
+{%- if page.description -%}
+<h2 class="subtitle">{{ page.description }}</h2>
+{%- endif -%}
 <div class="level">
     <div class="level-left">
         {%- if page.extra.author -%}
@@ -34,6 +37,22 @@
         {%- endif -%}
     </div>
 </div>
+{%- if page.extra.badges -%}
+<div class="level">
+    <div class="level-right">   
+        {%- for badge in page.extra.badges -%}
+        {%- if  badge.path -%}
+        {%- set url = get_url(path=badge.path) -%}
+        {%- set target = "" -%}
+        {%- else -%}
+        {%- set url = badge.url -%}
+        {%- set target = "_blank" -%}
+        {%- endif -%}
+        <a class="level-item" href="{{ url }}" target="{{ target }}"><img src="{{ badge.image }}" alt="{{ badge.name }}" ></a>
+        {%- endfor -%}
+    </div>
+</div>
+{%- endif -%}
 <hr />
 {% if page.toc %}
 <div class="level">

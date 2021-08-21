@@ -7,6 +7,7 @@ pkgs.mkShell {
       nodejs-14_x
       yarn
       pandoc
-      texlive.combined.scheme-small 
+      texlive.combined.scheme-small
+      gnome.librsvg
     ];
 }
