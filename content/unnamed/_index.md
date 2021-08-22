@@ -10,7 +10,7 @@ RPGs by playing some of the more lightweight systems, but wasn't quite ready yet
 Also, the few intermediate system I found were quite strongly tied to a specific playstyle or setting, making it difficult to come up
 with my own stories without hacking the base system. I therefore decided to design a game of my own that would integrate all the features I liked from the other games while keeping itself generic enough.
 
-The [base system] is available for free under the [Open Game License]. It is free to use as the base system for your own content, even in commercially published materials, as long as you comply with the terms of the license and give proper attribution.
+The [systems reference document] is available for free under the [Open Game License]. It is free to use as the base system for your own content, even in commercially published materials, as long as you comply with the terms of the license and give proper attribution.
 
 Note that additional material published on this website for Unnamed, like adventures and other supplemental modules, may be published under
 other licenses and terms.
@@ -23,5 +23,5 @@ other licenses and terms.
 [Pathfinder]: https://paizo.com/pathfinder
 [Call of Cthulhu]: https://www.chaosium.com/call-of-cthulhu-rpg/
 
-[base system]: @/unnamed/system.md
+[systems reference document]: @/unnamed/srd.md
 [Open Game License]: @/ogl.md
