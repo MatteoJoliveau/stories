@@ -207,17 +207,50 @@ Every RPG needs a way to track values over time. One of such values that is basi
 
 Gauges can be implemented in a wide variety of way, but they will generally follow the same overall structure. What follows should be considered more like guidelines than actual rules, and may be adapted by the GM or adventure designer if needed.
 
-Gauges express numeric values, generally in the range from 0 to 10. The amount by which they are increased or decreased depend on many factors, like the average value, the difficulty or harshness of the causing action, and generally the context of the game at play. A general rule of thumb is to use half of the Gauge's total range. Let's say that an average character at level 1 has a Health of 5. An average blow would deal 1 or 2 damages top, with heavy hits going up to 3, and only very powerful attacks reaching 4 or 5. Using a dice roll instead of using fixed values may lead to more interesting and unpredictable results, in which case it is recommended to use a `d4`, `d5` (a `d10` halved, rounded down) or `d6` to generate numbers in the aforementioned ranges.
+Gauges express numeric values, generally in the range from 0 to 10. The amount by which they are increased or decreased depend on many factors, like the average value, the difficulty or harshness of the causing action, and generally the context of the game at play. A general rule of thumb is to use half of the Gauge's total range. Let's say that an average character at level 1 has a Health of 5. An average blow would deal 1 or 2 damages top, with heavy hits going up to 3, and only very powerful attacks reaching 4 or 5. Using a dice roll instead of using fixed values may lead to more interesting and unpredictable results, in which case it is recommended to use a `d4`, `d5` (a `d10` halved, rounded down) or `d6` to generate numbers in the aforementioned ranges. This method works well because it synergizes with the ability scores and action system. More information  in the [Combat and damage](#combat-and-damage) section.
+
+In certain scenarios other scales might work best. Another implementation might use the percentage scale (from 0 to 100) and use percent dice to roll. Characters might roll the dice and, if the result is lower that the Gauge's value, it gets decreased. This is often used for mental sanity, since as the sanity lowers the chances of a bad result increase.
+
+Ultimately, GMs and designers should decide what works best for their specific setting and stories and come up with a suitable implementation.
 
 ## Combat and damage
 
-Lorem ipsum
+Many RPG systems are heavily combat-focused, with complex rules and a high level of detail. Others are more narrative-driven and reduce fighting to a simple dice roll and a colorful explanation of the action from the player.
+
+Unnamed aims at a comfortable middle ground between the two. The primary goal here is to provide enough structure to combat as to not leave everything up to the players and GM, while keeping the narrative flow going and allowing enough imagination and creativity to influence the outcome.
+
+As we discussed in the section about [Gauges](#gauges), Unnamed doesn't have a specific "life points" statistic or damage system. Therefore, the combat system defined here is basically an implementation of a specific Gauge (and one of the only exceptions to Unnamed's rule "define frameworks, not implementations"). GMs and adventure design should treat this section as a reference implementation and adapt it to their specific scenario.
+
+First of all, we need a life Gauge: a counter that can be decreased when taking damage and increased when healing. We will call this Gauge *Health Points*. Each character starts with 3 Health Points plus their END modifier.
+
+As Gauges values are changed via *actions*, a combat encounter consists in two or more characters executing actions at each other. Actions can go from attacking in melee, to firing a gun or casting a spell. These actions are colled *attack rolls*. Each action is rolled using the specific ability score for the case. A general rule of thumb for scores to use is:
+
+- ***STR***: hand to hand combat, melee weapons, and other types of physical damage
+- ***DEX***: ranged combat using arrows, guns, artillery, and other throwing weapons
+- ***WIL***: magical, psionic, or otherwise mental damange
+
+Regardless of the type of action, the success threshold is always composed of `6` plus the END modifier of the receiving character, unless stated otherwise by the action description or the GM. So if a warrior with STR `3` attacks a paladin with END `2`, they will have to roll equal or higher than `6 + 2 = (8)` to deal damage. At this point, assuming the hit lands, two things can happen: if the receiving character has any [Power](#skills-and-powers) that might help it avoid, absorb, or otherwise mitigate the incoming blow, they can use it and roll the correspondent saving throw. The success threshold is equal to the incoming attack roll. If they do not have any Power that can help them, the attack lands and damage is taken.
+
+Damage is dealt based on the weapon used. Each weapon deals a fixed amount of damage based on its properties, such as the size class (heavy, light, medium), ammunition type (regular, explosive, armor piercing, etc) and other attributes defined by the GM or module developer. In general, damage follows the following scale:
+
+- ***Light damage***: `1` or `2` points of damage, e.g. most swords, pistols, simple spells, bare fists
+- ***Medium damage***: `3` points of damage, e.g. rifles, two handed axes and swords, warhammers, bare fists of a really big individual
+- ***Heavy damage***: `4` or `5` points of damage, e.g. most explosives, high-energy rifles, really powerful magic, beasts and other huge creatures
+- ***Extremely heavy damage***: `6` or more points of damage, e.g. cannons and artillery, high-power explosives like demolition charges, legendary beasts, divine-level magic
+
+Damage always has an associated type, describing what kind of damage it deals. Example of damage types are: *piercing*, *cutting*, *elemental* (e.g. *fire*, *water*, *void*, etc), *explosive*, etc. This is important because some Powers might be able to reduce the incoming damage, up to completely negating it if they reduce it to zero, if they match one or more damage type. This is usually explained in the Power description. For example, the *Fireproof skin* described in the [Powers section](#skills-and-powers) might reduce incoming fire damage by 2 points.
+
+Some damage types might inflict some temporary malus to a character, in addition to just hurting them. These maluses are called *Conditions*, and are described in more detail in the [relevant section](#conditions).
+
+If a character is reduced to `0` Health Points, the are *at Death's Door*. This special condition is described in more detail in the [relevant section](#at-death-s-door).
 
 ## Conditions
 
 Lorem ipsum
 
 ## At Death's Door
+
+Lorem ipsum
 
 ## Items and equipment
 
@@ -282,6 +315,18 @@ The following items are hereby identified as Product Identity, as defined in the
 ### Open Content
 
 Except for material designated as Product Identity (see above), the game mechanics of this game product are Open Game Content, as defined in the Open Game License version 1.0a Section 1(d). No portion of this work other than the material designated as Open Game Content may be reproduced in any form without written permission.
+
+### Attribution and Compatibility
+
+Content based on this document following the terms of the license may express compatibility with the Unnamed system by using the following text:
+
+> Compatible with the Unnamed™ RPG system version 0.1.0 (found at {{ get_url(path="@/unnamed/srd.md") }}), authored by Matteo Joliveau and licensed under the Open Game License 1.0a (found at {{ get_url(path="@/ogl.md") }}).
+
+When publishing electronically, you can make "Unnamed™ RPG system version 0.1.0" a link to [{{ get_url(path="@/unnamed/srd.md") }}](@/unnamed/srd.md), and "Open Game License 1.0a" a link to [{{ get_url(path="@/ogl.md") }}](@/ogl.md), instead of printing the URLs separately, like so:
+
+> Compatible with the [Unnamed™ RPG system version 0.1.0](@/unnamed/srd.md), authored by Matteo Joliveau and licensed under the [Open Game License 1.0a](@/ogl.md).
+
+This attribution counts as "Independent Agreement" as expressed by the terms of the Open Game License 1.0a, Section 7.
 
 [Dungeons & Dragons]: https://dnd.wizards.com/
 [Lady Blackbird]: https://ladyblackbird.org
