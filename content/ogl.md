@@ -40,4 +40,4 @@ The following text is the property of Wizards of the Coast, Inc. and is Copyrigh
 
 15. COPYRIGHT NOTICE
 Open Game License v 1.0 Copyright 2000, Wizards of the Coast, Inc.
-Unnamed RPG™ Copyright 2021, Matteo Joliveau.
+Unnamed™ RPG system Copyright 2021, Matteo Joliveau.

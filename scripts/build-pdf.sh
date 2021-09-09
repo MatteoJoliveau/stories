@@ -8,11 +8,13 @@ for path in ${paths[@]};
 do
     echo "Building $path"
     md=$(mktemp)
-    cat "$path" > "$md"
-    sed -i 's$@$https://stories.matteojoliveau.com$g' "$md"
-    sed -i 's$.md$$g' "$md"
-    sed -i 's$description:$subtitle:$g' "$md"
-    sed -i 's$  author:$author:$g' "$md"
+    cat "$path" | \
+        sed 's${{ get_url(path="$$g'| \
+        sed 's$") }}$$g'| \
+        sed 's$@/$https://stories.matteojoliveau.com/$g'| \
+        sed 's$.md$$g'| \
+        sed 's$description:$subtitle:$g'| \
+        sed 's$  author:$author:$g' > "$md"
     in=$(echo "$path" | sed 's@.md@@g')
     out=$(echo "$in" | sed 's@content@public@g')
     mkdir -p $(dirname "$out")

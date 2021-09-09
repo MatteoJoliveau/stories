@@ -185,21 +185,21 @@ Each character in Unnamed is an outstanding individual capable of performing inc
 
 ***Skills*** are basically a specific [action](#dice-rolls) with some special effect attached to it. They follow the same rules as regular actions, requiring a dice roll using the assosciated ability score modifier, applying their effect on success.
 
-***Powers*** are special [saves](#dice-rolls) a character can make. They are passive abilities that allow them to more efficiently respond to threats and dangers. When a save roll is called for the associated ability score, if the effect applies to the situation, a character can use their power to increase their chances of success by rolling *two* dice instead of one, and keeping the highest result. Only one power can be used at a time.
+***Powers*** are special [saves](#dice-rolls) a character can make. They are passive abilities that allow them to more efficiently respond to threats and dangers. When a save roll is called for the associated ability score, if the effect applies to the situation, a character can use their power to increase their chances of success by rolling *two* dice instead of one, and keeping the highest result. Only one power can be used at a time. Some powers may have special effects like reducing incoming damage. This is described in more detail in the [Combat and damage](#combat-and-damage) section of this document.
 
 As with Traits, there is no predefined list of Skills and Powers in this document. GMs, players, and adventure designers are encouraged to come up with their own interesting Skills and Powers that make sense in the context of the setting and the player characters.
 
 Some examples of ***Skills***:
 
-- *Fire ball* (WIL): You cast a flaming ball of magic that burns whathever it touches.
-- *Shapeshifting* (WIL): You can hide your true appearance, changing your physical form for a short period of time. 
-- *Raging charge* (STR): You run towards the enemy with a mighty scream, mowing them down as you flail your weapons around.
+- ***Fire ball*** (WIL): You cast a flaming ball of magic that burns whathever it touches, dealing 2 points of *fire* damage
+- ***Shapeshifting*** (WIL): You can hide your true appearance, changing your physical form for up to 5 minutes. 
+- ***Raging charge*** (STR): You run towards the enemy with a mighty scream, mowing them down as you flail your weapons around. Requires a DEX saving roll from all of opponents in line with you.
 
 Some examples of ***Powers***:
 
-- *Fireproof skin* (END): You were forged in the flames of Hell itself. Fire struggles to hurt you.
-- *Uncanny dodge* (DEX): You plunge to the side and avoid an incoming blow, rolling on the floor and bouncing back up on your feet.
-- *Mind of steel* (WIL): You can resist intimidation attemps, mind manipulation, and other forms of psychological warfare.
+- ***Fireproof skin*** (END): You were forged in the flames of Hell itself, so fire struggles to hurt you. Reduces incoming *fire* damage by 2.
+- ***Uncanny dodge*** (DEX): You plunge to the side and avoid an incoming blow or projectile, rolling on the floor and bouncing back up on your feet.
+- ***Mind of steel*** (WIL): You can resist intimidation attemps, mind manipulation, and other forms of psychological warfare. Reduces incoming *psychic* damage by 1.
 
 ## Gauges
 
@@ -229,16 +229,16 @@ As Gauges values are changed via *actions*, a combat encounter consists in two o
 - ***DEX***: ranged combat using arrows, guns, artillery, and other throwing weapons
 - ***WIL***: magical, psionic, or otherwise mental damange
 
-Regardless of the type of action, the success threshold is always composed of `6` plus the END modifier of the receiving character, unless stated otherwise by the action description or the GM. So if a warrior with STR `3` attacks a paladin with END `2`, they will have to roll equal or higher than `6 + 2 = (8)` to deal damage. At this point, assuming the hit lands, two things can happen: if the receiving character has any [Power](#skills-and-powers) that might help it avoid, absorb, or otherwise mitigate the incoming blow, they can use it and roll the correspondent saving throw. The success threshold is equal to the incoming attack roll. If they do not have any Power that can help them, the attack lands and damage is taken.
+Regardless of the type of action, the attack is always rolled against an END saving roll from the receiving character, unless stated otherwise by the action description or the GM (e.g. some spells requiring a WIL save). So if a warrior with STR `3` attacks a paladin with END `2`, rolling a `4` on the attack will require the defender to roll a `5` or higher to avoid receving damage (because `4 + 3 = (7)` must be higher than `5 + 2 = (7)` for the attack to be successful). If the receiving character has any [Power](#skills-and-powers) that might help it avoid, absorb, or otherwise mitigate the incoming blow (even if they are related to a different attribute then END), they can use it and roll two dice, keeping the highest result.
 
-Damage is dealt based on the weapon used. Each weapon deals a fixed amount of damage based on its properties, such as the size class (heavy, light, medium), ammunition type (regular, explosive, armor piercing, etc) and other attributes defined by the GM or module developer. In general, damage follows the following scale:
+If an attack lands, damage is dealt based on the weapon used. Each weapon deals a fixed amount of damage based on its properties, such as the size class (heavy, light, medium), ammunition type (regular, explosive, armor piercing, etc) and other attributes defined by the GM or module developer. The exact amount of damage is defined in the weapon description. See the [Items and equipment](#items-and-equipment) section for more information. In general, damage follows the following scale:
 
 - ***Light damage***: `1` or `2` points of damage, e.g. most swords, pistols, simple spells, bare fists
 - ***Medium damage***: `3` points of damage, e.g. rifles, two handed axes and swords, warhammers, bare fists of a really big individual
 - ***Heavy damage***: `4` or `5` points of damage, e.g. most explosives, high-energy rifles, really powerful magic, beasts and other huge creatures
 - ***Extremely heavy damage***: `6` or more points of damage, e.g. cannons and artillery, high-power explosives like demolition charges, legendary beasts, divine-level magic
 
-Damage always has an associated type, describing what kind of damage it deals. Example of damage types are: *piercing*, *cutting*, *elemental* (e.g. *fire*, *water*, *void*, etc), *explosive*, etc. This is important because some Powers might be able to reduce the incoming damage, up to completely negating it if they reduce it to zero, if they match one or more damage type. This is usually explained in the Power description. For example, the *Fireproof skin* described in the [Powers section](#skills-and-powers) might reduce incoming fire damage by 2 points.
+Damage always has an associated type, describing what kind of damage it deals. Example of damage types are: *piercing*, *cutting*, *elemental* (e.g. *fire*, *water*, *void*, etc), *explosive*, etc. This is important because on top of rolling two dice, some Powers might be able to reduce the incoming damage (up to completely negating it if they reduce it to zero) if they match one or more damage type. This is usually explained in the Power description. For example, *Fireproof skin* as described in the [Powers section](#skills-and-powers) reduces incoming fire damage by 2 points. Note that these effects are considered BEFORE rolling the save action, so if a Power completely negates an attack there is no need for a save roll.
 
 Some damage types might inflict some temporary malus to a character, in addition to just hurting them. These maluses are called *Conditions*, and are described in more detail in the [relevant section](#conditions).
 
@@ -306,7 +306,7 @@ From [Skyfarer], the wonderful RPG system set in the world of [Fallen London], I
 
 ## Licensing
 
-Copyright © 2021 Matteo Joliveau. All Rights Reserved. Licensed under the [Open Game License 1.0a](@/ogl.md).
+Unnamed™ RPG system Copyright © 2021 Matteo Joliveau. All Rights Reserved. Licensed under the [Open Game License 1.0a](@/ogl.md).
 
 ### Product Identity
 
