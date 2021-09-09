@@ -181,11 +181,11 @@ As you can see, Traits and Qualities allow to create interesting characters with
 
 ## Skills and Powers
 
-Each character in Unnamed is an outstanding individual capable of performing incredible actions. These actions are represented by ***Skills*** and ***Powers***. A character starts with two Skills and two Powers, and can acquire more up to a maximum of five each. Skills and Powers are defined by their name, an associated ability score, and a short sentence describing their effect.
+Each character in Unnamed is an outstanding individual capable of performing incredible actions. These actions are represented by ***Skills*** and ***Powers***. A character starts with two Skills and two Powers, and can acquire more up to a maximum of five each. They can also choose to replace an existing Skill or Power with a new one. Skills and Powers are defined by their name, an associated ability score, and a short sentence describing their effect.
 
-***Skills*** are basically a special kind of [action](#dice-rolls) with some specific effect attached to it. They follow the same rules as regular actions, requiring an dice roll using the assosciated ability score modifier, but they apply the effect on success.
+***Skills*** are basically a specific [action](#dice-rolls) with some special effect attached to it. They follow the same rules as regular actions, requiring a dice roll using the assosciated ability score modifier, applying their effect on success.
 
-***Powers*** are special [saves](#dice-rolls) a character can make. They are passive abilities that allow them to more efficiently respond to threats and dangers. When a save roll is called for the associated ability score, if the effect applies to the situation a character can use their power to increase their chances of success by rolling *two* dice instead of one, and keeping the highest result.
+***Powers*** are special [saves](#dice-rolls) a character can make. They are passive abilities that allow them to more efficiently respond to threats and dangers. When a save roll is called for the associated ability score, if the effect applies to the situation, a character can use their power to increase their chances of success by rolling *two* dice instead of one, and keeping the highest result. Only one power can be used at a time.
 
 As with Traits, there is no predefined list of Skills and Powers in this document. GMs, players, and adventure designers are encouraged to come up with their own interesting Skills and Powers that make sense in the context of the setting and the player characters.
 
@@ -203,7 +203,11 @@ Some examples of ***Powers***:
 
 ## Gauges
 
-Lorem ipsum
+Every RPG needs a way to track values over time. One of such values that is basically omnipresent in game systems is *health*, a measure of a character's vitality. However, other systems may have a different set of values that a player must keep track of. For this reason, Unnamed doesn't impose a single named value, but rather provides a framework for how such values should work, leaving the implementation up to GMs and module designers. We call these values *gauges*. A gauge is an instrument used to display a measurement at a specific point in time. A Gauge in Unnamed is a numeric value that can change over time. Health is a good candidate for a Gauge because it has a specific value in time and can be increased or decreased in response to some external actions, like healing or taking damage. A cosmic horror game might want to have a second Gauge for tracking *sanity*, which can decrease as more horrific and outerwordly things happen to the characters. A space battle game might want to track the ship's fuel and shields.
+
+Gauges can be implemented in a wide variety of way, but they will generally follow the same overall structure. What follows should be considered more like guidelines than actual rules, and may be adapted by the GM or adventure designer if needed.
+
+Gauges express numeric values, generally in the range from 0 to 10. The amount by which they are increased or decreased depend on many factors, like the average value, the difficulty or harshness of the causing action, and generally the context of the game at play. A general rule of thumb is to use half of the Gauge's total range. Let's say that an average character at level 1 has a Health of 5. An average blow would deal 1 or 2 damages top, with heavy hits going up to 3, and only very powerful attacks reaching 4 or 5. Using a dice roll instead of using fixed values may lead to more interesting and unpredictable results, in which case it is recommended to use a `d4`, `d5` (a `d10` halved, rounded down) or `d6` to generate numbers in the aforementioned ranges.
 
 ## Combat and damage
 
@@ -213,13 +217,15 @@ Lorem ipsum
 
 Lorem ipsum
 
+## At Death's Door
+
 ## Items and equipment
 
 Lorem ipsum
 
 ## Character progression
 
-Unnamed characters can grow and change over the course of their perilous adventures. This is reflected in their **level**, a number ranging from 1 to 15 indicating how powerful and capable they are. Each character usually start al level 1, indicating an average common person, although some GMs or game settings may call for a higher starting level. Every now and then, the GM can decide to grant a character some **experience points** (XP), to represent their growth and personal development. The frequency and amount of XPs gifted to characters can vary wildly based on the setting, the action that has been performed, the pacing the GM wants to maintain, etc. When a character reaches a certain number of XPs, they can **level up**, increasing their level by 1. Every time a character levels up they can increase an [ability score](#ability-scores) by 1 and add a new Quality to one of their existing Trait. Depending on the level reached they can also either gain a new [Trait](#traits-and-qualities), or unlock a new skill or power. 
+Unnamed characters can grow and change over the course of their perilous adventures. This is reflected by their **level**, a number ranging from 1 to 15 indicating how powerful and capable they are. Each character usually start al level 1, indicating an average common person, although some GMs or game settings may call for a higher starting level. Every now and then, the GM can decide to grant a character some **experience points** (XP), to represent their growth and personal development. The frequency and amount of XPs gifted to characters can vary wildly based on the setting, the action that has been performed, the pacing the GM wants to maintain, etc. When a character reaches a certain number of XPs, they can **level up**, increasing their level by 1. Every time a character levels up they can increase an [ability score](#ability-scores) by 1 and add a new Quality to one of their existing Trait. Depending on the level reached they can also either gain a new [Trait](#traits-and-qualities), or unlock a new [Skill or Power](#skills-and-powers). 
 
 The exact progression path is detailed in the following table:
 
@@ -243,15 +249,15 @@ The exact progression path is detailed in the following table:
 
 When levelling up a character, always keep in mind the following limitations:
 
-| Characteristic        | Starting at level 1 | Maximum |  
-| --------------------- | ------------------- | ------- |
-| Ability Scores        | *                   | 6       |
-| Traits                | 2                   | 5       |
-| Qualities (per Trait) | 3                   | 6       |
-| Skills                | 2                   | 5       |
-| Powers                | 2                   | 5       |
+| Characteristic                   | Starting at level 1 | Maximum |  
+| -------------------------------- | ------------------- | ------- |
+| Ability Scores (value per score) | [*]                 | 6       |
+| Traits                           | 2                   | 5       |
+| Qualities (per Trait)            | 3                   | 6       |
+| Skills                           | 2                   | 5       |
+| Powers                           | 2                   | 5       |
 
-\* see the [ability scores](#ability-scores) section for more information on how to determine the starting values
+[*] see the [ability scores](#ability-scores) section for more information on how to determine the starting values
 
 ## GM tips
 
