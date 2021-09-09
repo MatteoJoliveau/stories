@@ -67,13 +67,13 @@ You can distribute them however you like. For instance, let's pretend we are mak
 STR:  3
 DEX:  1
 END:  2
-PER:  0
-WIL: -1
+PER: -1
+WIL:  0
 ```
 
 #### Dice roll
 
-Ability scores can be randomly determined by rolling a `6d6`, lowering all results by 2, and discarding the lowest. For example, let's consider the following roll:
+Ability scores can be randomly determined by rolling `6d6`, lowering all results by 2, and discarding the lowest. For example, let's consider the following roll:
 
 ```
 6 - 2 =  4
@@ -84,7 +84,7 @@ Ability scores can be randomly determined by rolling a `6d6`, lowering all resul
 5 - 2 =  3
 ```
 
-One of the two `-1` is discarded as the lowest number. We are then left with `4`, `0`, `1`, `-1` and `3`. Since we are building a sorcerer, a magical warrior not really interested in physical prowess, we choose to distribute the numbers in the following way:
+One of the two `-1` is discarded as the lowest number. We are then left with `4`, `0`, `1`, `-1` and `3`. Since we are building a sorcerer, a magical warrior without much physical prowess, we choose to distribute the numbers in the following way:
 
 ```
 STR:  -1
@@ -96,7 +96,7 @@ WIL:   4
 
 #### Point Buy
 
-When using the Point Buy method, all ability scores start at the default value of `0`. You then have 5 points to spend among them to increase their value. You can also subtract points from them, they are then added to your pool.
+When using the Point Buy method, all ability scores start at the default value of `0`. You then have 5 points to spend among them to increase their value. You can also subtract points from them, which are then added back to your pool.
 
 For example, we could build a cunning, survivalist Ranger with the following set:
 
@@ -117,7 +117,7 @@ Every action in Unnamed is represented by a dice roll. Rolling dice brings an el
 *Actions* happen when a player character or an NPC willfully do something. The result of the roll determines if the action succeeds or fails.
 The GM decides what threshold must be reached or surpassed by the roll to be considered a success, otherwise the action fails. Additionally, the GM may decide to set a higher threshold that, if reached, will give the character an extra bonus. For example, a DEX roll of `8` would allow the player to safely leap over a crumbling bridge, but a `10` would also make the bridge collapse behind them, stopping the enemies in pursuit.
 
-*Saves rolls* are made in response to an action. A save roll might be called to avoid an incoming attack, resist an intimidation attempt, or generally anytime something is *being done to* a character. If the roll is successful, the character avoids the danger. Otherwise, they succumb to the peril and the action follows through.
+*Saves rolls* are made in response to an action. A save roll might be called to avoid an incoming attack, resist an intimidation attempt, or generally anytime something is *being done to* a character. If the roll is successful, the character avoids the danger. Otherwise, they succumb to the peril and the action follows through. FOr instance, let's say that our character barely made the jump over the bridge, but landed badly and had to grasp for a dangling rope to avoid falling down. The DM will call for a STR save roll to see if they manage to pull themselves to safety or fall in the canyon below.
 
 An *opposing check* happens when two actions collide with each other. A prime example of opposing check is a grapple. Two characters struggling to overpower each other will perform an opposing STR check to see who will prevail. Note that performing an action to avoid another action is considered a save, not an opposing check. For example, plunging sideways to avoid an arrow is a DEX save, because the character is not trying to prevent the arrow from being shot, but rather is avoiding the consequences of the shot being fired. An opposing check in this situation would have been a standoff between two archers, with the winner of the roll shooting first.
 
@@ -125,9 +125,9 @@ Some common thresholds based on the difficulty of the actions are: `6` for a **s
 
 ## Traits and Qualities
 
-Traits in Unnamed are a framework for defining the abilities a character possesses. A Trait can be anything that describes an aspect of a character personality, profession, physical or mental characteristic, or even ethnicity. Unnamed doesn't have classes as seen in more traditional game systems, but instead uses Traits to compose them. This means that instead of defining a fixed set of classes, Unnamed provides the rules and logic to create any kind of class that can fit in the setting of an adventure. For the purpose of this document, we will often refer to the classic fantasy genre classes, such as barbarian, wizard, or paladin, but the game mechanics defined in this section can apply to every kind of setting. For example, a sci-fi adventure could implement a Star Captain archetype by defining the *Captain* Trait. Combining them with other similar but complementary Traits, such as *Ex Soldier* and *Calculating Mind*, would make for a great veteran captain, hardened by many battles and ready to challenge the vastness of space. Note that all the Traits cited in this document are just used as examples. GMs, players, and adventure designers are encouraged to come up with their own interesting Traits.
+Traits in Unnamed are a framework for defining the abilities a character possesses. A Trait can be anything that describes an aspect of a character personality, profession, physical or mental characteristic, or even ethnicity. Unnamed doesn't have classes as seen in more traditional game systems, but instead uses Traits to compose them. This means that instead of defining a fixed set of classes, Unnamed provides the rules and logic to create any kind of class that can fit in the setting of an adventure. For the purpose of this document, we will often refer to the classic fantasy genre classes, such as barbarian, wizard, or paladin, but the game mechanics defined in this section can apply to every kind of setting. We often refer to classes as "Archetypes". For example, a sci-fi adventure could implement a Star Captain archetype by defining the *Captain* Trait. Combining them with other similar but complementary Traits, such as *Ex Soldier* and *Calculating Mind*, would make for a great veteran captain, hardened by many battles and ready to challenge the vastness of space. Note that all the Traits cited in this document are just used as examples. GMs, players, and adventure designers are encouraged to come up with their own interesting Traits.
 
-A character can have many Traits, starting with two and increasing their number as they gain more levels, up to a maximum of five Traits. Each Trait is defined by a set of *Qualities*, a short expression that describes something about that Trait. Traits start with three Qualities, and new ones can be added when a character levels up, to a maximum of 6 Qualities per Trait. When a roll is called, the character can add all the Qualities that make sense for the action or save being rolled. Each Quality chosen adds `1` to the roll.
+A character can have many Traits, starting with two and adding more as they gain more levels, up to a maximum of five Traits. Each Trait is defined by a set of *Qualities*, a short expression that describes something about that Trait. Traits start with three Qualities, and new ones can be added when a character levels up, to a maximum of 6 Qualities per Trait. When a roll is called, the character can add all the Qualities that make sense for the action or save being rolled. Each Quality chosen adds `1` to the roll.
 
 Let's pretend that we're making a rogue, a skilled thief used to survive in the slums and capable of breaking in undetected. We'll use the [Standard Array](#standard-array) method and come up with the following ability scores:
 
@@ -167,7 +167,7 @@ Now let's imagine we're trying to break into a well-guarded mansion by lockpicki
 
 ### A note on races and archetypes
 
-Unnamed doesn't define any concept of race, class, or archetype as seen in more traditional game systems. This is in hope of keeping the rules lightweight and flexible enough to be used in settings where these concept may not apply. However, these concepts can be easily implemented using Traits. For example, the Elf race can be implemented using the following Traits:
+Unnamed doesn't define any concept of race or class as seen in more traditional game systems. This is in hope of keeping the rules lightweight and flexible enough to be used in settings where these concept may not apply. However, these concepts can be easily implemented using Traits. For example, the Elf race can be implemented using the following Traits:
 
 | Elf           | Magical          |
 | ------------- | ---------------- |
@@ -181,25 +181,31 @@ As you can see, Traits and Qualities allow to create interesting characters with
 
 ## Skills and Powers
 
-Each character in Unnamed is an outstanding individual capable of performing incredible actions. These actions are represented by ***Skills*** and ***Powers***. Although mechanically very similar, they differ ever-so-slightly in the way they are described. A character starts with two Skills and two Powers, and can acquire more up to a maximum of five each. Skills and Powers are defined by their name and a short sentence describing their effect. 
+Each character in Unnamed is an outstanding individual capable of performing incredible actions. These actions are represented by ***Skills*** and ***Powers***. A character starts with two Skills and two Powers, and can acquire more up to a maximum of five each. Skills and Powers are defined by their name, an associated ability score, and a short sentence describing their effect.
 
-Whenever a roll is called where a Skill or Power may apply given the context, the player may roll two dice instead of one, and keep the highest result.  Some Skills and Powers may have a more narrative application than plain dice roll. For example, *Shapeshifting* may grant a character the ability to change their external appearance for a limited period of time. GMs and players decide how to apply those abilities when it makes sense.
+***Skills*** are basically a special kind of [action](#dice-rolls) with some specific effect attached to it. They follow the same rules as regular actions, requiring an dice roll using the assosciated ability score modifier, but they apply the effect on success.
+
+***Powers*** are special [saves](#dice-rolls) a character can make. They are passive abilities that allow them to more efficiently respond to threats and dangers. When a save roll is called for the associated ability score, if the effect applies to the situation a character can use their power to increase their chances of success by rolling *two* dice instead of one, and keeping the highest result.
 
 As with Traits, there is no predefined list of Skills and Powers in this document. GMs, players, and adventure designers are encouraged to come up with their own interesting Skills and Powers that make sense in the context of the setting and the player characters.
 
-***Skills*** are acquired talents. They are learned through study, training, and practice. Some examples of Skills:
+Some examples of ***Skills***:
 
-- *Precise shot*: You hold your breath, your target steady in sight, ready to take your shot.
-- *Combat roll*: You plunge to the side and avoid an incoming blow, rolling on the floor and bouncing back up on your feet.
-- *Dual wielding*: You hold one weapon in each hand, ready to strike your opponent down.
+- *Fire ball* (WIL): You cast a flaming ball of magic that burns whathever it touches.
+- *Shapeshifting* (WIL): You can hide your true appearance, changing your physical form for a short period of time. 
+- *Raging charge* (STR): You run towards the enemy with a mighty scream, mowing them down as you flail your weapons around.
 
-***Powers*** are innate abilities a character posseses. These are part of their essence and are developed with introspection and meditation. They are not taught, but instead emerge from the depth of mind and soul. Some examples of Powers:
+Some examples of ***Powers***:
 
-- *Fireproof skin*: You are forged in the flames of Hell itself. Fire struggles to hurt you.
-- *Shapeshifting*: You can hide your true appearance, changing your physical form for a short period of time.
-- *Understanding emotions*: You can read another person's face and detect their emotional state, uncover lies, and spot deception.
+- *Fireproof skin* (END): You were forged in the flames of Hell itself. Fire struggles to hurt you.
+- *Uncanny dodge* (DEX): You plunge to the side and avoid an incoming blow, rolling on the floor and bouncing back up on your feet.
+- *Mind of steel* (WIL): You can resist intimidation attemps, mind manipulation, and other forms of psychological warfare.
 
-### A note on magic and spells
+## Gauges
+
+Lorem ipsum
+
+## Combat and damage
 
 Lorem ipsum
 
