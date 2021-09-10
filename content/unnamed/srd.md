@@ -240,6 +240,9 @@ If an attack lands, damage is dealt based on the weapon used. Each weapon deals 
 
 Damage always has an associated type, describing what kind of damage it deals. Example of damage types are: *piercing*, *cutting*, *elemental* (e.g. *fire*, *water*, *void*, etc), *explosive*, etc. This is important because on top of rolling two dice, some Powers might be able to reduce the incoming damage (up to completely negating it if they reduce it to zero) if they match one or more damage type. This is usually explained in the Power description. For example, *Fireproof skin* as described in the [Powers section](#skills-and-powers) reduces incoming fire damage by 2 points. Note that these effects are considered BEFORE rolling the save action, so if a Power completely negates an attack there is no need for a save roll.
 
+Characters take turns attacking each others. The combat order is determined by the DEX score, with characters with higher DEX going first. If two characters have equal DEX, they should roll-off and
+the winner goes first.
+
 Some damage types might inflict some temporary malus to a character, in addition to just hurting them. These maluses are called *Conditions*, and are described in more detail in the [relevant section](#conditions).
 
 If a character is reduced to `0` Health Points, the are *at Death's Door*. This special condition is described in more detail in the [relevant section](#at-death-s-door).
