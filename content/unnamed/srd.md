@@ -249,11 +249,30 @@ If a character is reduced to `0` Health Points, the are *at Death's Door*. This 
 
 ## Conditions
 
-Lorem ipsum
+A character's status can be altered, for better or for worse, by a number of factor. Drinking a full bottle of wine by themselves will surely leave them with a bad hangover in the morning.
+Hearing a heartfelt speech before a battle will inspire you to fight better. In Unnamed, these status changes are tracked with *Conditions*.
+
+Conditions are short expressions, often a single word, that describe a character temporary status. A character can have multiple Conditions at once, but they can also cancel each other.
+For example, a character cannot be both *tired* and *rested* at the same time. Conditions can be acquired and dismissed in a variety of ways. Sometimes the GM will give them out as consequence
+for some narrative actions (e.g. drinking said bottle of wine), while sometimes they can be inflicted in combat or as a result of another character's actions (e.g. receiving a hard hit to a leg will leave them
+*limping*). Removing Conditions follows the same rule, like bandaging a wound to remove the *limping*, or sleeping to recover from the *hangover*.
+
+Conditions are not just for roleplaying, as they can affect the outcome of dice rolls. A Condition might affect an action by increasing or decreasing the result by `1`, depending on whether 
+it affects it positively or negatively. For example, the *limping* condition might contribute a `-1` to a jump, but grant a `+1` to a character trying to disguise as an old person.
 
 ## At Death's Door
 
-Lorem ipsum
+Sometimes, things go wrong. An adventurer takes too much damage in combat, or falls off a very high cliff, or does anything to put them in harm's way. When things look dark,
+and every hope seems lost, they are *At Death's Door*.
+
+This is a special [Condition](#conditions) inflicted by the GM when a character is on the verge of loosing their life. A character *At Death's Door* will not be able to move or perform
+any usual action, but needs to be rescued by a fellow party member or another character willing to help. Helping a character *At Death's Door* counts as a WIL action, with a success threshold based on
+the context and risk associated with the action. For example, rescuing a fallen friend in the heat of a big battle will be far mor riskier (and therefore more difficult) than doing so in a safe and peaceful
+environment. 
+
+A character *At Death's Door* starts with a counter set at `2`. At regular intervals, the character must roll a `d6` and check if the value is equal or lower than the counter. If it is, the counter gets
+incremented by `1`. If the counter reaches `6`, the character dies. When in [combat](#combat-and-damage), they must roll during their regular turn. Out of combat, the GM will call the rolls when they
+feel it makes sense from a narrative standpoint. The rolls symbolize the character's conditions deteriorating.
 
 ## Items and equipment
 
