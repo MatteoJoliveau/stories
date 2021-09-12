@@ -3,7 +3,7 @@
     "license": "ISC",
     "scripts": {
         "build": "parcel build assets/scripts/main.js --out-dir static --no-source-maps",
-        "build:prod": "yarn build && zola build && yarn build:pdf",
+        "build:prod": "yarn build && zola build",
         "build:preview": "yarn build && zola build --base-url $DEPLOY_PRIME_URL",
         "build:pdf":"scripts/build-pdf.sh",
         "watch": "parcel watch assets/scripts/main.js --out-dir static --no-hmr --no-source-maps",

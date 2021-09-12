@@ -5,8 +5,8 @@
 {#{%- set unnamed_root_url = get_url(path="@/unnamed/_index.md", lang=lang) | safe -%}#}
 {#{%- set unnamed = get_section(path="unnamed/_index.md") -%}#}
 
-{%- set iurevard_root_url = get_url(path="@/iurevard/_index.md", lang=lang) | safe -%}
-{%- set iurevard = get_section(path="iurevard/_index.md") -%}
+{#{%- set iurevard_root_url = get_url(path="@/iurevard/_index.md", lang=lang) | safe -%}#}
+{#{%- set iurevard = get_section(path="iurevard/_index.md") -%}#}
 
 <div class="menu">
     <p class="menu-label">Navigation</p>
@@ -32,11 +32,11 @@
 {#                        {{ unnamed.title }}#}
 {#                    </a>#}
 {#                </li>#}
-                <li>
-                    <a href="{{ iurevard_root_url }}" class="{{ macros::is_page_active(name=" iurevard/_index", recursive=true) }}">
-                        {{ iurevard.title }}
-                    </a>
-                </li>
+{#                <li>#}
+{#                    <a href="{{ iurevard_root_url }}" class="{{ macros::is_page_active(name=" iurevard/_index", recursive=true) }}">#}
+{#                        {{ iurevard.title }}#}
+{#                    </a>#}
+{#                </li>#}
             </ul>
         </li>
         <li>
