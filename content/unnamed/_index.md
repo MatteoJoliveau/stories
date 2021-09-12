@@ -1,6 +1,7 @@
 +++
 title = "Unnamed"
 template = "rpg/index.html"
+draft = true
 +++
 
 **Unnamed** is a pen-and-paper RPG system designed to be a middleground between narrative-focused systems, such as [Skyfarer], [Lady Blackbird], [Broken Tales], and [Cthulhu Dark], and more mechanics-heavy games like [Dungeons & Dragons], [Pathfinder], and [Call of Cthulhu].

@@ -1,32 +1,44 @@
 {%- if not side -%}
 {%- set side = "left" -%}
 {%- endif -%}
+
+{%- if not op -%}
+    {%- set op = "scale" -%}
+{%- endif -%}
+
+{%- set image = resize_image(path=src, width=width, height=height, op=op, format="webp") -%}
+{%- set url = get_url(path=src) -%}
+
 <div class="columns">
     {%- if side == "left" -%}
     <div class="column">
-        <figure class="image{%- if class -%} {{ class }}{%- endif -%}">
-            <img src="{{ src | safe }}"
-                 alt="{{ alt }}"
-                 {%- if width -%}width="{{ width }}" {%- endif -%}
-                 {%- if height -%}height="{{ height }}" {%- endif -%}
-                 style="{%- if width -%}width:{{ width }}px{%- endif -%}{%- if height -%};height:{{ height }}px{%- endif -%}">
-        </figure>
+        <a href="{{ url | safe }}">
+            <figure class="image{%- if class -%} {{ class }}{%- endif -%}">
+                <img src="{{ image.url | safe }}"
+                     alt="{{ alt }}"
+                     width="{{ image.width }}"
+                     height="{{ image.height }}"
+                     style="width:{{ image.width }}px;height:{{ image.height }}px">
+            </figure>
+        </a>
     </div>
     {%- endif -%}
 
-    <div class="column">
-        {{ body }}
+    <div class="column content">
+        {{ body | markdown | safe }}
     </div>
 
     {%- if side == "right" -%}
         <div class="column">
-            <figure class="image{%- if class -%} {{ class }}{%- endif -%}">
-                <img src="{{ src | safe }}"
-                     alt="{{ alt }}"
-                     {%- if width -%}width="{{ width }}" {%- endif -%}
-                     {%- if height -%}height="{{ height }}" {%- endif -%}
-                     style="{%- if width -%}width:{{ width }}px{%- endif -%}{%- if height -%};height:{{ height }}px{%- endif -%}">
-            </figure>
+            <a href="{{ url | safe }}">
+                <figure class="image{%- if class -%} {{ class }}{%- endif -%}">
+                    <img src="{{ image.url | safe }}"
+                         alt="{{ alt }}"
+                         width="{{ image.width }}"
+                         height="{{ image.height }}"
+                         style="width:{{ image.width }}px;height:{{ image.height }}px">
+                </figure>
+            </a>
         </div>
     {%- endif -%}
 </div>

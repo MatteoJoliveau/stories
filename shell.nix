@@ -3,7 +3,7 @@ let
 in
 pkgs.mkShell {
     buildInputs = with pkgs; [
-      zola
+      unstable.zola
       nodejs-14_x
       yarn
       pandoc

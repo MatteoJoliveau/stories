@@ -55,9 +55,25 @@
                 {%- endif -%}
                 {{ page.title }}
             </a>
-        {%- else -%}
-            <p class="panel-block">{{ trans(key="nothing-here", lang=lang) }}</p>
         {%- endfor -%}
+
+        {%- set links = root_section.extra.links | default(value=[]) -%}
+        {%- for link in links -%}
+            <a class="panel-block"
+               target="_blank"
+               href="{{ link.url | safe }}">
+                {%- if link.icon -%}
+                    <span class="panel-icon">
+                      <i class="{{ link.icon }}" aria-hidden="true"></i>
+                    </span>
+                {%- endif -%}
+                {{ link.title }}
+            </a>
+        {%- endfor -%}
+
+        {%- if root_section.pages | length <= 0 and links | length <= 0 -%}
+        <p class="panel-block">{{ trans(key="nothing-here", lang=lang) }}</p>
+        {%- endif -%}
     {%- elif current_section and current_section != root_section -%}
         {# Subsection #}
         {%- for page in current_section.pages -%}

@@ -6,12 +6,8 @@ render_emoji = true
 generate_feed = true
 
 default_language = "en"
-languages = [
-    { code = "it", search = true }
-]
 
 [translations]
-[translations.en]
 by = "by"
 nothing-here = "Uh oh, there is nothing here"
 available-in = "Available in"
@@ -36,7 +32,10 @@ is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0
 unless otherwise specified
 """
 
-[translations.it]
+[languages.it]
+generate_feed = true
+
+[languages.it.translations]
 by = "di"
 nothing-here = "Uh oh, non c'è niente qui"
 available-in = "Disponibile in"

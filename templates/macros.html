@@ -7,7 +7,8 @@
 {%- endmacro %}
 
 {%- macro is_page_active(name, recursive=false) -%}
-    {%- set full_name = self::locale_name(name=name) -%}
+{#    {%- set full_name = self::locale_name(name=name) -%}#}
+    {%- set full_name = name -%}
 
     {%- set current = section | default(value=page) -%}
     {%- if current -%}

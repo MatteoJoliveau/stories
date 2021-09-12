@@ -24,9 +24,5 @@ Drumstick chicken strip steak meatball. Turducken buffalo venison cupim. Cupim s
 picanha salami pig. Boudin chicken kevin capicola, pork chop kielbasa short loin ribeye jerky meatloaf sirloin doner
 turkey spare ribs.
 
-{% wrap_image(src="https://www.fillmurray.com/g/200/300", alt="Fill Murray", width=200, height=300, side="right") %}
-Brisket tenderloin burgdoggen short ribs jowl, kevin sirloin pork chop chicken rump. Short ribs chislic pork loin filet mignon, alcatra turkey venison prosciutto. Bacon picanha capicola, corned beef leberkas short loin hamburger. Meatloaf meatball sausage, chuck chislic shoulder burgdoggen ground round tongue ham hock. Pork belly frankfurter meatball ball tip filet mignon chicken jerky.
-{% end %}
-
 Porchetta brisket burgdoggen kevin strip steak ribeye tail ham picanha doner cow shoulder bresaola. Ball tip boudin tenderloin, turducken kielbasa bacon pig pancetta. Pork chop tenderloin t-bone venison corned beef beef ham. Drumstick ham hock buffalo flank venison cupim. Bacon flank strip steak t-bone. Rump capicola kevin, jerky flank turducken corned beef tail pork loin t-bone ball tip spare ribs short loin strip steak. Short ribs pork chop short loin flank andouille salami tail cow filet mignon leberkas chislic tri-tip drumstick, pancetta swine.
 Does your lorem ipsum text long for something a little meatier? Give our generator a try… it’s tasty!
