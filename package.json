@@ -4,7 +4,7 @@
     "scripts": {
         "build": "parcel build assets/scripts/main.js --out-dir static --no-source-maps",
         "build:prod": "yarn build && zola build && yarn build:pdf",
-        "build:preview": "yarn build && zola build --base-url $DEPLOY_PRIME_URL && yarn build:pdf",
+        "build:preview": "yarn build && zola build --base-url $DEPLOY_PRIME_URL",
         "build:pdf":"scripts/build-pdf.sh",
         "watch": "parcel watch assets/scripts/main.js --out-dir static --no-hmr --no-source-maps",
         "serve": "concurrently --kill-others \"yarn watch\" \"zola serve --drafts\"",
