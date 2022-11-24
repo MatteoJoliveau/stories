@@ -1,0 +1,12 @@
+@import url("https://fonts.bunny.net/css?family=Montserrat&display=swap");
+$family-sans-serif: "Montserrat", -apple-system, system-ui, BlinkMacSystemFont,
+"Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+:root {
+    --green: green;
+    --red: red;
+    --light-grey: rgb(211, 211, 211);
+
+    --success: var(--green);
+    --danger: var(--red);
+}

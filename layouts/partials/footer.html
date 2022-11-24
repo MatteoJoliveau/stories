@@ -1,8 +1,12 @@
-<footer>
-    <p>
-        &copy; {{ replace .Site.Copyright "{year}" now.Year }}
-        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
-            title="Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International">Some rights
-            reserved</a>
-    </p>
-</footer>
+{{ define "footer_md" }}
+    {{ with .Params.Footer }}<p>{{ . | markdownify }}</p>{{ end }}
+    {{ with .Parent }}{{ template "footer_md" . }}{{ end }}
+{{ end }}
+
+<p>
+    &copy; {{ replace .Site.Copyright "{year}" now.Year }}
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+        title="Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International">Some rights
+        reserved</a>
+</p>
+{{ template "footer_md" . }}

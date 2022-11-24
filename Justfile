@@ -4,4 +4,7 @@ default:
   @just --list | grep -v "    default"
 
 run:
-    hugo serve
+  hugo serve --printI18nWarnings --printPathWarnings --buildDrafts
+
+build:
+  hugo --gc --minify --cleanDestinationDir

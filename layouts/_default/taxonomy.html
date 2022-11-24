@@ -1,0 +1,12 @@
+{{ define "main" }}
+
+<dl>
+    {{ range .Data.Terms }}
+    <a href="{{ .Page.Permalink }}">
+        <dt>{{ .Page.Title }}</dt>
+        <dd>{{ .Page.Description | default .Page.Summary }}</dd>
+    </a>
+    {{ end }}
+</dl>
+
+{{ end }}

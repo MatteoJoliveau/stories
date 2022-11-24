@@ -1,0 +1,25 @@
+{{ define "current" }}
+    {{ if eq .current .target}}current{{ end }}
+{{ end }}
+{{ $currentPage := .RelPermalink }}
+{{ $root := "/" | relLangURL }}
+<nav>
+    <ul>
+        <li><a class="{{ if eq $currentPage $root}}current{{end}}" href="{{ $root }}">Home</a></li>
+        {{ range .Site.Menus.main }}
+        {{ $url := .URL | relLangURL }}
+        <li><a class="{{ if eq $currentPage $url}}current{{end}}" href="{{ $url }}" {{ if .Params.external }}target="_blank" {{ end }}>
+                {{ .Name }}{{ if .Params.icon }} <span class="icon"><i class="{{ .Params.icon }}"></i></span> {{ end }}
+            </a></li>
+        {{ end}}
+        {{ range .Site.Sections }}
+        <li><a class="{{ if eq $currentPage .RelPermalink}}current{{end}}" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+        {{ range $name, $taxonomy := .Site.Taxonomies }}
+        {{ $url := printf "%s%s/" $root ($name | urlize)}}
+        <li><a class="{{ if eq $currentPage $url}}current{{end}}" href="{{ $url }}">{{ $name | title }}</a>
+        {{ end }}
+        <li><button class="theme-toggle" title="Switch dark/light theme"><i
+                    class="fa-solid fa-circle-half-stroke"></i></button></li>
+    </ul>
+</nav>

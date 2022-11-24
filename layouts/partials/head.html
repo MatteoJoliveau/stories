@@ -1,0 +1,45 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<base href="{{ .Site.BaseURL }}">
+<link rel="canonical" href="{{ .Permalink }}">
+{{ with .OutputFormats.Get "RSS" }}
+    <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Title }}" />
+{{ end }}
+<title>{{ block "title" . }}
+    {{ .Site.Title }}
+  {{ end }} | Matteo Joliveau</title>
+
+<!-- OpenGraph -->
+{{/*  {{ template "_internal/opengraph.html" . }}  */}}
+
+<!-- Twitter Cards -->
+{{ template "_internal/twitter_cards.html" . }}
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+
+{{ $options := (dict "targetPath" "style.css" "outputStyle" "compressed" "enableSourceMap" (not hugo.IsProduction) "includePaths" (slice "node_modules")) }}
+{{ $style := resources.Get "scss/styles.scss" | resources.ToCSS $options | resources.PostCSS }}
+{{ if not .Site.IsServer }}
+    {{ $style = $style | minify | fingerprint }}
+{{ end }}
+<link rel="stylesheet" href="{{ $style.Permalink }}">
+{{- block "styles" . }}{{- end }}
+
+<!-- JS -->
+{{ $js := resources.Get "ts/index.ts" | js.Build "index.js" }}
+{{ if not .Site.IsServer }}
+{{ $js = $js | minify | fingerprint}}
+{{ end }}
+<script src="{{ $js.Permalink }}" defer></script>
+{{- block "scripts" . }}{{- end }}
+
+<!-- Favicon -->
+<link rel="shortcut icon" type="image/x-icon" href="{{ "favicon.ico" | absURL }}" />
+
+<!-- PWA -->
+<link rel='manifest' href='/manifest.json'>
+
+<!-- Verification -->
+<link rel="me" href="https://fosstodon.org/@matteojoliveau">

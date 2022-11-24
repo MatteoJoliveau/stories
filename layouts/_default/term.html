@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+<h2>Articles in {{ .Data.Singular }} <i>{{ .Data.Term | title }}</i></h2>
+<dl>
+    {{ range .Pages }}
+    <a href="{{ .Permalink }}">
+        {{ $series := (index (.GetTerms "series") 0).Title }}
+        {{ $title := .Title }}
+        {{ if $series }}
+            {{ $title = printf "%s / %s" $series $title }}
+        {{ end }}
+        <dt>{{ $title }}</dt>
+        <dd>{{ .Description | default .Summary }}</dd>
+    </a>
+    {{ end }}
+</dl>
+
+{{ end }}

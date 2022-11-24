@@ -1,0 +1,15 @@
+<div class="post-meta">
+    <span>{{ .PublishDate.Format "Jan 2, 2006" }}</span>
+    <span class="separator"></span>
+    <span>{{ .ReadingTime }} minutes read</span>
+    <span class="separator"></span>
+    {{ $tags := .Params.tags }}
+    {{ with $tags }}
+    {{ range $index, $tag := .}}
+    <span><a href="{{ " /tags/{{ $tag }}" | relLangURL }}">{{ $tag }}</a></span>
+    {{ if ne (add $index 1) (len $tags )}}
+    <span>·</span>
+    {{ end }}
+    {{ end }}
+    {{ end }}
+</div>

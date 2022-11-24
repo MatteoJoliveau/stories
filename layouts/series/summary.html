@@ -1,0 +1,28 @@
+{{ define "title" }}{{ .Title }}{{ end }}
+{{ define "main" }}
+
+{{ with .Description }}<p><em>{{ . }}</em></p>{{ end }}
+{{ with .Content }}{{ . }}{{ end }}
+
+<section>
+    {{ range .Pages }}
+    <article>
+        <div>
+            <h2>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                {{ partial "progress-status.html" . }}
+            </h2>
+            <p>
+                {{ .Summary }}
+            </p>
+        </div>
+        {{ if .Truncated }}
+        <div>
+            <a href="{{ .RelPermalink }}">Read More…</a>
+        </div>
+        {{ end }}
+
+    </article>
+    {{ end }}
+</section>
+{{ end }}

@@ -1,0 +1,15 @@
+{{ define "main" }}
+{{ partial "post-meta.html" . }}
+
+{{ with .CurrentSection }}
+<div>
+    <article>
+        <p>This post is parth of the <a href="{{ .RelPermalink }}">{{ .Title }}</a> series.</p>
+    </article>
+</div>
+{{ end }}
+
+{{ partial "toc.html" .TableOfContents }}
+{{ .Content }}
+
+{{ end}} {{/* main */}}

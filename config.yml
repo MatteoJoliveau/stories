@@ -2,3 +2,20 @@ baseURL: https://stories.matteojoliveau.com
 languageCode: en-gb
 title: Stories
 copyright: '{year} Matteo Joliveau.'
+
+taxonomies:
+  tag: tags
+
+menu:
+  main:
+  - url: "/about/"
+    name: About
+    identifier: about
+
+enableGitInfo: true
+module:
+  mounts:
+    - source: ./static
+      target: static
+    - source: ./node_modules/@fortawesome/fontawesome-free/webfonts
+      target: static/webfonts
