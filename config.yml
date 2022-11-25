@@ -19,3 +19,9 @@ module:
       target: static
     - source: ./node_modules/@fortawesome/fontawesome-free/webfonts
       target: static/webfonts
+blackfriday:
+  hrefTargetBlank: true
+markup:
+  goldmark:
+    renderer:
+      unsafe: false

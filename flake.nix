@@ -16,6 +16,7 @@
             hugo
             nodejs-18_x
             nodePackages.pnpm
+            inkscape
           ];
         };
       });

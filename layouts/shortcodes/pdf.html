@@ -1,0 +1,7 @@
+{{ $url := .Get "url"}}
+{{ $title := .Get "title" }}
+{{ $alt := .Get "alt" | default $title }}
+{{ $height := .Get "height" | default "100vh" }}
+<object data="{{ $url }}" type="application/pdf" width="100%" style="height: {{ $height }}">
+    <p><a href="{{ $url }}">Download {{ $alt }}</a></p>
+</object>

@@ -1,17 +1,22 @@
 {{ define "main" }}
 
-<h2>Articles in {{ .Data.Singular }} <i>{{ .Data.Term | title }}</i></h2>
+<h2>Series with {{ .Data.Singular }} <i>{{ .Data.Term | title }}</i></h2>
 <dl>
-    {{ range .Pages }}
-    <a href="{{ .Permalink }}">
-        {{ $series := (index (.GetTerms "series") 0).Title }}
-        {{ $title := .Title }}
-        {{ if $series }}
-            {{ $title = printf "%s / %s" $series $title }}
-        {{ end }}
-        <dt>{{ $title }}</dt>
-        <dd>{{ .Description | default .Summary }}</dd>
-    </a>
+    {{ range where (where .Pages "Section" "series" ) "Kind" "section"  }}
+    <dt><a href="{{ .Permalink }}">{{ .Title }}</a></dt>
+    <dd>{{ .Description | default .Summary }}</dd>
+    {{ end }}
+</dl>
+
+<h2>Articles with {{ .Data.Singular }} <i>{{ .Data.Term | title }}</i></h2>
+<dl>
+    {{ range .RegularPages }}
+    {{ $title := .Title }}
+    {{ if and (eq .Kind "page") (eq .Type "series")}}
+    {{ $title = printf "%s / %s" .Parent.Title $title }}
+    {{ end }}
+    <dt><a href="{{ .Permalink }}">{{ $title }}</a></dt>
+    <dd>{{ .Description | default .Summary }}</dd>
     {{ end }}
 </dl>
 

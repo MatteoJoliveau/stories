@@ -8,6 +8,7 @@
 @import "@fortawesome/fontawesome-free/scss/solid.scss";
 
 @import "theme";
+@import "series";
 
 header>nav button {
     margin: 0 .5rem 1rem .5rem;
@@ -37,7 +38,12 @@ main>div {
     }
 }
 
-.progress {
+.current {
+    color: var(--accent) !important;
+    border-color: var(--accent) !important;
+}
+
+.badge {
     margin-left: 0.2rem;
     color: #fff;
     background: var(--accent);
@@ -46,40 +52,9 @@ main>div {
     padding: 0.1em 0.3em;
     vertical-align: middle;
 
-    &.completed {
-        &:after {
-            content: 'completed';
-        }
-
+    &.warning {
+        border: solid 1px var(--dark-grey);
+        color: black;
+        background-color: var(--warning);
     }
-
-    &.ongoing {
-        &:after {
-            content: 'ongoing';
-        }
-
-        background-color: var(--success);
-    }
-
-    &.paused {
-        &:after {
-            content: 'paused';
-        }
-
-        background-color: var(--danger);
-    }
-
-    &.archived {
-        &:after {
-            content: 'archived';
-        }
-
-        background-color: var(--disabled);
-        color: var(--text)
-    }
-}
-
-.current {
-    color: var(--accent) !important;
-    border-color: var(--accent) !important;
 }

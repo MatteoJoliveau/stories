@@ -1,0 +1,72 @@
+.series-box {
+    text-align: center;
+}
+
+.series-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+        width: 90px;
+
+        @media screen and (max-width: 548px) {
+            display: none;
+        }
+    }
+
+    span {
+        width: 90px;
+
+        @media screen and (max-width: 548px) {
+            display: none;
+        }
+    }
+}
+
+select[name="series-part"] {
+    max-width: 340px;
+}
+
+.progress {
+    @extend .badge;
+
+    &.completed {
+        &:after {
+            content: 'completed';
+        }
+
+    }
+
+    &.ongoing {
+        &:after {
+            content: 'ongoing';
+        }
+
+        background-color: var(--success);
+    }
+
+    &.paused {
+        &:after {
+            content: 'paused';
+        }
+
+        background-color: var(--danger);
+    }
+
+    &.archived {
+        &:after {
+            content: 'archived';
+        }
+
+        background-color: var(--disabled);
+        color: var(--text)
+    }
+
+    &.upcoming {
+        &:after {
+            content: 'upcoming';
+        }
+    }
+}

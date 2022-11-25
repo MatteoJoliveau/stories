@@ -1,12 +1,12 @@
 {{ define "title" }}{{ .Title }}{{ end }}
-{{ define "header" }}<h1>{{ .Title }}{{ partial "progress-status.html" . }}</h1>{{ end }}
+{{ define "header" }}
+<h1>{{ .Title }}{{ partial "progress-status.html" . }}{{ partial "draft-badge.html" . }}</h1>
+{{ with .Description }}
+<h4>{{ . }}</h4>
+{{ end }}
+{{ end }}
 {{ define "main" }}
 
-{{ if .Description }}
-<p>
-    <em>{{ .Description }}</em>
-</p>
-{{ end }}
 {{ if .Content }}
 <div>
     <aside>
@@ -14,7 +14,7 @@
         <nav>
             <ol>
                 {{ range .Pages }}
-                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                <li><a href="{{ .RelPermalink }}">{{ .Title | truncate 25 }}</a></li>
                 {{ end }}
             </ol>
         </nav>
@@ -29,9 +29,7 @@
         <div>
             <h2>
                 <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                {{ with .Params.status }}
-                <span class="progress {{ . }}"></span>
-                {{ end }}
+                {{ partial "draft-badge.html" . }}
             </h2>
             {{ partial "post-meta.html" . }}
             <p>
