@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://stories.matteojoliveau.com/schemas/series-post.json",
+  "title": "Series Post",
+  "description": "A single post in a series",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "url"
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string",
+          "format": "datetime"
+        },
+        "draft": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "title",
+        "date"
+      ]
+    },
+    "series": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "url"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    },
+    "content": {
+      "type": "object",
+      "description": "A map of media-type to URLs where the content can be found in that particular format",
+      "example": {
+        "text/html": "https://example.com/hello/world",
+        "text/markdown": "https://example.com/hello/world.md"
+      },
+      "additionalProperties": {
+        "type": "string",
+        "format": "url"
+      }
+    }
+  },
+  "required": [
+    "id",
+    "metadata",
+    "series",
+    "content"
+  ]
+}

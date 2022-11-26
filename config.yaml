@@ -25,3 +25,14 @@ markup:
   goldmark:
     renderer:
       unsafe: false
+
+outputs:
+  section:
+    - HTML
+    - RSS
+    - JSON
+    - MARKDOWN
+  page:
+    - HTML
+    - JSON
+    - MARKDOWN

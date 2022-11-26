@@ -1,0 +1,9 @@
+{{ define "schema" }}https://stories.matteojoliveau.com/schemas/post.json{{ end }}
+{{ define "json" }}
+    "content": {
+        {{- $total := len .AlternativeOutputFormats }}
+        {{- range $index, $format := .AlternativeOutputFormats }}
+        "{{ $format.MediaType.Type }}": "{{ $format.Permalink }}"{{ if ne (add $index 1) $total }},{{ end }}
+        {{- end }}
+    }
+{{ end }}

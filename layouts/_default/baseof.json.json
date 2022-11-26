@@ -1,0 +1,10 @@
+{
+    "$schema": "{{ block "schema" . }}{{end}}",
+    "id": "{{ .Permalink }}",
+    "metadata": {
+        "title": "{{ .Title }}",
+        {{- with .Draft }}"draft": "{{ . }}",{{ end }}
+        "date": "{{ .Date.UTC.Format "2006-01-02T15:04:05Z07:00" }}"
+    },
+    {{- block "json" . }}{{end}}
+}

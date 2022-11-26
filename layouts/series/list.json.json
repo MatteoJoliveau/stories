@@ -1,0 +1,19 @@
+{{ define "schema" }}https://stories.matteojoliveau.com/schemas/series.json{{ end }}
+{{ define "json" }}
+    "status": "{{ .Params.status }}",
+    "content": {
+        {{- $total := len .AlternativeOutputFormats }}
+        {{- range $index, $format := .AlternativeOutputFormats }}
+        "{{ $format.MediaType.Type }}": "{{ $format.Permalink }}"{{ if ne (add $index 1) $total }},{{ end }}
+        {{- end }}
+    },
+    "posts": [
+        {{- $total := len .Pages }}
+        {{- range $index, $page := .Pages }}
+        {{ with $page }}
+        {
+            "id": "{{ .Permalink }}"
+        }{{ end }}{{ if ne (add $index 1) $total }},{{ end }}
+        {{- end }}
+    ]
+{{ end }}
