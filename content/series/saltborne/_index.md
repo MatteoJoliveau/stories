@@ -14,7 +14,7 @@ footer: |
 
 **Saltborne** is a Solo RPG series by [Matteo Joliveau] powered by the [Ironsworn] RPG system.
 
-This series is set in [Iurevar], a fantasy continent similar to our 16th century Europe, and follows the adventures of **Ami Palanis**, a young half-elf that has found refuge from her past in the pirate kingdom of the **Soleari Islands**.
+This series is set in [Iurevar], a fantasy continent similar to our 16th century Europe, and follows the adventures of **Ami Palanis**, a young half-elf that has found refuge from her past in the pirate kingdom of the [**Soleari Islands**](https://iurevar.world/wiki/soleari-islands).
 
 <!--more-->
 
