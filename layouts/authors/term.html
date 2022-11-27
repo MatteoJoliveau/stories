@@ -14,7 +14,7 @@
 {{- $author := index .Site.Data.authors .Data.Term }}
 <figure>
     <img style="opacity: unset;" 
-    src="{{ partial "gravatar.html" $author }}?s=200&d=identicon" alt="{{ .name }}'s Gravatar">
+    src="{{ partial "gravatar.html" $author }}?s=200&d=identicon" alt="{{ $author.name }}'s Gravatar">
 </figure>
 {{ with $author.links }}
 <div class="author-links">
