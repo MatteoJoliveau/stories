@@ -46,7 +46,7 @@ Here is her character sheet (using [Eric Bright](http://playeveryrole.com)'s des
 
 Here is a reference map of Iurevar. The Soleari Islands are in the far west.
 
-![Map of Iurevar](https://iurevar.world/images/map.jpg)
+[![Map of Iurevar](https://iurevar.world/images/map.jpg)](https://iurevar.world/wiki)*Map of the Iurevar continent | [Wiki](https://iurevar.world/wiki)*
 
 
 ## How does this work
