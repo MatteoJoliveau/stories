@@ -5,6 +5,8 @@
     {{ range where (where .Pages "Section" "series" ) "Kind" "section"  }}
     <dt><a href="{{ .Permalink }}">{{ .Title }}</a></dt>
     <dd>{{ .Description | default .Summary }}</dd>
+    {{ else }}
+    <p>No series found</p>
     {{ end }}
 </dl>
 
@@ -17,6 +19,8 @@
     {{ end }}
     <dt><a href="{{ .Permalink }}">{{ $title }}</a></dt>
     <dd>{{ .Description | default .Summary }}</dd>
+    {{ else }}
+    <p>No articles found</p>
     {{ end }}
 </dl>
 

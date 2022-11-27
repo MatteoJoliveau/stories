@@ -5,12 +5,10 @@ copyright: '{year} Matteo Joliveau.'
 
 taxonomies:
   tag: tags
+  author: authors
 
 menu:
-  main:
-  - url: "/about/"
-    name: About
-    identifier: about
+  main: []
 
 enableGitInfo: true
 module:
@@ -25,14 +23,3 @@ markup:
   goldmark:
     renderer:
       unsafe: false
-
-outputs:
-  section:
-    - HTML
-    - RSS
-    - JSON
-    - MARKDOWN
-  page:
-    - HTML
-    - JSON
-    - MARKDOWN

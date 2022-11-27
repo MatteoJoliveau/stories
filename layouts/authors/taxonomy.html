@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+{{- $authors := .Site.Data.authors }}
+<ul>
+    {{ range .Data.Terms }}
+    {{- $author := index $authors .Page.Title }}
+    <li>
+        <div>
+            <a href="{{ .Page.Permalink }}">
+                <h4>{{ $author.name }}</h4>
+            </a>
+        </div>
+    </li>
+    {{ else }}
+    <li>No authors found</li>
+    {{ end }}
+</ul>
+
+{{ end }}

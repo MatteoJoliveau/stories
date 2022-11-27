@@ -6,6 +6,8 @@
         <dt>{{ .Page.Title }}</dt>
         <dd>{{ .Page.Description | default .Page.Summary }}</dd>
     </a>
+    {{ else }}
+    <p>No {{ .Data.Plural }} found</p>
     {{ end }}
 </dl>
 

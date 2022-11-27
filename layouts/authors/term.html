@@ -1,0 +1,50 @@
+{{ define "header" }}
+{{- $author := index .Site.Data.authors .Data.Term }}
+<h1>{{ $author.name }}</h1>
+{{ end }}
+{{ define "main" }}
+<style>
+    .author-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+</style>
+
+{{- $author := index .Site.Data.authors .Data.Term }}
+{{ partial "gravatar.html" $author }}
+{{ with $author.links }}
+<div class="author-links">
+    {{ range $key, $url := . }}
+    <a href="{{ $url }}">{{ $key }}</a>
+    {{ end }}
+</div>
+{{ end }}
+{{ with $author.bio }}<div>{{ . | markdownify }}</div>{{ end }}
+
+<section>
+    <h3>Series by {{ $author.name }}</h3>
+    <dl>
+        {{ range where (where .Pages "Section" "series" ) "Kind" "section" }}
+        <dt><a href="{{ .Permalink }}">{{ .Title }}</a></dt>
+        <dd>{{ .Description | default .Summary }}</dd>
+        {{ else }}
+        <p>No series found</p>
+        {{ end }}
+    </dl>
+</section>
+
+<section>
+    <h3>Posts by {{ $author.name }}</h3>
+    {{ range where .Pages ".Kind" "page" }}
+    {{ $title := .Title }}
+    {{ if and (eq .Kind "page") (eq .Type "series")}}
+    {{ $title = printf "%s / %s" .Parent.Title $title }}
+    {{ end }}
+    <dt><a href="{{ .Permalink }}">{{ $title }}</a></dt>
+    <dd>{{ .Description | default .Summary }}</dd>
+    {{ else }}
+    <p>No posts found</p>
+    {{ end }}
+</section>
+{{ end }}

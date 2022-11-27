@@ -1,9 +1,12 @@
 ---
 title: Saltborne
 description: A solo RPG series on the western seas of Iurevar
+authors: [matteojoliveau]
 tags: [ironsworn, rpg, iurevar]
 status: ongoing
 footer: |
+    This work is based on the [Iurevar world](https://iurevar.world/), an Intellectual Property and Copyright of Matteo Joliveau, and licensed for use under the [Creative Commons Attribution-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/) license.
+
     This work is based on [Ironsworn](https://www.ironswornrpg.com), created by Shawn Tomkin, and licensed for our use under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
 
     Dice and rolls SVGs courtesy of [Ted Tschopp](https://github.com/TedTschopp/Ironsworn-SRD)
@@ -58,7 +61,7 @@ Click on the box to open it and see the result, or don't if you don't care about
 
 {{< ironsworn/action-roll challenge_1=7 challenge_2=4 action=4 stat=2 />}}
 
-The series is written entirely from the character's point of view, like you're reading her journal. Whenever I (the player) want to chime in and comment on stuff, you'll see a box like this.
+The series is written entirely from the character's point of view. Whenever I (the player) want to chime in and comment on stuff, you'll see a box like this.
 
 > Hi! Matt's speaking here :D
 
@@ -69,6 +72,6 @@ I don't want to commit on a specific regular schedule I may not be able to respe
 
 #### Let's begin, shall we?
 
-[Matteo Joliveau]: https://matteojoliveau.com
+[Matteo Joliveau]: /authors/matteojoliveau
 [Ironsworn]: https://www.ironswornrpg.com
 [Iurevar]: https://iurevar.world

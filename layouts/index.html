@@ -1,3 +1,12 @@
 {{ define "main" }}
 {{ .Content }}
+
+<section>
+    <h3>Recent posts</h3>
+    {{ range .Site.RegularPages | first 3 }}
+    {{ partial "post-article.html" . }}
+    {{ else }}
+    <p>No recent post to show</p>
+    {{ end }}
+</section>
 {{ end }}

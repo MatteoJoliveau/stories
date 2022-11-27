@@ -1,0 +1,17 @@
+<article>
+    <div>
+        <h2>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            {{ partial "draft-badge.html" . }}
+        </h2>
+        {{ partial "post-meta.html" . }}
+        <p>
+            {{ .Summary }}
+        </p>
+    </div>
+    {{ if .Truncated }}
+    <div>
+        <a href="{{ .RelPermalink }}">Read More…</a>
+    </div>
+    {{ end }}
+</article>
