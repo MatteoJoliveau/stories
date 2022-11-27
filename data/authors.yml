@@ -3,7 +3,10 @@
 matteojoliveau:
   name: Matteo Joliveau
   links:
-    website: https://matteojoliveau.com
+    - name: website
+      url: https://matteojoliveau.com
+    - name: fediverse
+      url: https://fosstodon.org/@matteojoliveau
   email: matteo@matteojoliveau.com
   bio: >
     Hailing from the northern lands of Italy, my day job as a software developer gives me plenty of 

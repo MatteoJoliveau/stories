@@ -3,7 +3,7 @@ title: Saltborne
 description: A solo RPG series on the western seas of Iurevar
 authors: [matteojoliveau]
 tags: [ironsworn, rpg, iurevar]
-status: ongoing
+status: upcoming
 footer: |
     This work is based on the [Iurevar world](https://iurevar.world/), an Intellectual Property and Copyright of Matteo Joliveau, and licensed for use under the [Creative Commons Attribution-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/) license.
 
@@ -25,8 +25,6 @@ Here is her character sheet (using [Eric Bright](http://playeveryrole.com)'s des
 {{< pdf url="series/saltborne/character-sheet.pdf" title="Character Sheet">}}
 
 {{% md %}}
-
-
 **Bonds**:
 - **Mama Bea**, the keeper of the Salty Sardine Inn. She is a kind but firm woman that has given Ami a place to sleep and food to eat when she was lost and alone.
 - **Astrid**, a human girl Ami met in Port Tempest. She works as a cabin girl on a fishing ship but stays often at the Salty Sardine

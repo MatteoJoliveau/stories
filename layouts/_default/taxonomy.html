@@ -1,14 +1,12 @@
 {{ define "main" }}
 
-<dl>
+{{ if .Data.Terms }}
+<ul class="tag-cloud">
     {{ range .Data.Terms }}
-    <a href="{{ .Page.Permalink }}">
-        <dt>{{ .Page.Title }}</dt>
-        <dd>{{ .Page.Description | default .Page.Summary }}</dd>
-    </a>
-    {{ else }}
-    <p>No {{ .Data.Plural }} found</p>
+    <li><a href="{{ .Page.RelPermalink }}" data-weight="{{ len .Pages }}">{{ .Page.Title }}</a></li>
     {{ end }}
-</dl>
-
+</ul>
+{{ else }}
+<p>No {{ .Data.Plural }} found</p>
+{{ end }}
 {{ end }}

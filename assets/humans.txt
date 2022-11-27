@@ -1,0 +1,11 @@
+/* TEAM */
+{{- range .Site.Data.authors }}
+Name: {{ .name }}
+{{- range .links }}
+{{ .name | title }}: {{ .url }}
+{{- end }}
+{{- end }}
+               
+                            
+/* SITE */
+Last update: {{ .Site.LastChange.Format "2006/01/02" }}

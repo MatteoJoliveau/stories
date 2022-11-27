@@ -4,12 +4,24 @@
     <span>{{ .ReadingTime }} minutes read</span>
     <span class="separator"></span>
     {{ $tags := .Params.tags }}
-    {{ with $tags }}
-    {{ range $index, $tag := .}}
+    {{ range $index, $tag := $tags }}
     <span><a href="{{ " /tags/{{ $tag }}" | relLangURL }}">{{ $tag }}</a></span>
     {{ if ne (add $index 1) (len $tags )}}
     <span>·</span>
     {{ end }}
+    {{ end }}
+    <span class="separator"></span>
+    {{ $authors := .Params.authors }}
+    {{ range $index, $name := $authors }}
+    <span class="author-badge">
+        {{ $author := index $.Site.Data.authors $name }}
+        <img src="{{ partial "gravatar.html" $author }}?s=30" >
+        <a href="{{ " /authors/{{ $name }}" | relLangURL }}">
+            {{ $author.name }}
+        </a>
+    </span>
+    {{ if ne (add $index 1) (len $authors )}}
+    <span>·</span>
     {{ end }}
     {{ end }}
 </div>

@@ -8,17 +8,18 @@ taxonomies:
   author: authors
 
 menu:
-  main: []
+  main:
+  - name: Contacts
+    url: /contacts/
 
 enableGitInfo: true
+enableRobotsTXT: true
 module:
   mounts:
     - source: ./static
       target: static
     - source: ./node_modules/@fortawesome/fontawesome-free/webfonts
       target: static/webfonts
-blackfriday:
-  hrefTargetBlank: true
 markup:
   goldmark:
     renderer:

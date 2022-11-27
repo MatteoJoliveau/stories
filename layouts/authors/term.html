@@ -12,11 +12,14 @@
 </style>
 
 {{- $author := index .Site.Data.authors .Data.Term }}
-{{ partial "gravatar.html" $author }}
+<figure>
+    <img style="opacity: unset;" 
+    src="{{ partial "gravatar.html" $author }}?s=200&d=identicon" alt="{{ .name }}'s Gravatar">
+</figure>
 {{ with $author.links }}
 <div class="author-links">
-    {{ range $key, $url := . }}
-    <a href="{{ $url }}">{{ $key }}</a>
+    {{ range . }}
+    <a href="{{ .url }}" target="_blank" rel="me">{{ .name }}</a>
     {{ end }}
 </div>
 {{ end }}
