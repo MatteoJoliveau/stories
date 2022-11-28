@@ -22,10 +22,40 @@ Here is her character sheet (using [Eric Bright](http://playeveryrole.com)'s des
 
 {{< details "Character sheet" >}}
 
-{{< pdf url="series/saltborne/character-sheet.pdf" title="Character Sheet">}}
-
 {{% md %}}
-**Bonds**:
+
+### Ami Palanis
+| **Edge** | **Heart** | **Iron** | **Shadow** | **Wits** |
+| :------: | :-------: | :------: | :--------: | :------: |
+| 3        | 1         | 1        | 2          | 2        |
+
+| **Momentum**       | **Health** | **Spirit** | **Supply** |
+| :----------------: | :--------: | :--------: | :--------: |
+| 2 (2 reset/10 max) | 5          | 5          | 5          |
+
+**Experience**: 0
+
+**Debilities**
+
+- Conditions
+    - [ ] Wounded
+    - [ ] Unprepared
+    - [ ] Shaken
+    - [ ] Encumbered
+
+- Conditions
+    - [ ] Maimed
+    - [ ] Corrupted
+
+- Burdens
+    - [ ] Cursed
+    - [ ] Tormented
+
+**Vows**:
+ - *I will find those responsible for my father's death* (Extreme 0, Background Vow)
+ - *I have to retrieve a stolen package from a warehouse at the docks* (Dangerous 0)
+
+**Bonds (2)**:
 - **Mama Bea**, the keeper of the Salty Sardine Inn. She is a kind but firm woman that has given Ami a place to sleep and food to eat when she was lost and alone.
 - **Astrid**, a human girl Ami met in Port Tempest. She works as a cabin girl on a fishing ship but stays often at the Salty Sardine
 

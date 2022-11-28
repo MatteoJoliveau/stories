@@ -1,4 +1,7 @@
-{{ $title := .Get "title" | default "Action Roll" }}
+{{ $title :=  .Get "title" | default "Action Roll" }}
+{{ with .Get "move" }}
+{{ $title = printf "<em>%s</em>" . }}
+{{ end }}
 {{ $challenge1 := .Get "challenge_1" }}
 {{ $challenge2 := .Get "challenge_2" }}
 {{ $action := .Get "action" }}
@@ -46,7 +49,7 @@
 </style>
 
 <details>
-    <summary>{{ $title }} {{ with $statName }}+ {{ . }} {{ end }}({{ $result }})</summary>
+    <summary>{{ $title | safeHTML }} {{ with $statName }}+ {{ . }} {{ end }}({{ $result }})</summary>
     {{ .Inner }}
     <div>
         <svg class="action-roll" version="1.1" x="0px" y="0px" viewBox="0 0 300 200" xml:space="preserve"
