@@ -33,5 +33,6 @@
     {{ end }}
 
     <p>This series is {{ .Params.status }} </p>
+    <p>Last updated on {{ .Lastmod.Format "Jan 02, 2006" }}</p>
 </section>
 {{ end }}
