@@ -5,4 +5,4 @@ Fediverse: https://fosstodon.org/@matteojoliveau
                
                             
 /* SITE */
-Last update: 2022/11/27
+Last update: 2022/11/28
