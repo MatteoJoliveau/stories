@@ -18,7 +18,7 @@ This series is set in [Iurevar], a fantasy continent similar to our 16th century
 
 <!--more-->
 
-Here is her character sheet (using [Eric Bright](http://playeveryrole.com)'s design). This is the canonical place for it and will be updated as the series progress.
+Here is her character sheet. This is the canonical place for it and will be updated as the series progress.
 
 {{< details "Character sheet" >}}
 
